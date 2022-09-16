@@ -1,0 +1,35 @@
+$color-white : #fff;
+$color-black : #000;
+
+$color-black-medium : #888;
+$color-gray: #aaa;
+
+$color-black-soft: #31363b;
+
+// breakpoints
+$break-point-320: 320px;
+$break-point-360: 360px;
+$break-point-576: 576px;
+$break-point-640: 640px;
+$break-point-768: 768px;
+$break-point-992: 992px;
+$break-point-1200: 1200px;
+$break-point-1400: 1400px;
+
+// viewport
+$media-extra-small-mobile: '(max-width: #{$break-point-360 - 12})';
+$media-small-fit-mobile: '(max-width: #{$break-point-576 - 1 })';
+$media-small-mobile: '(max-width: #{$break-point-360 - 1})';
+$media-screen-mobile: '(max-width: #{$break-point-768 - 1})';
+$media-screen-mobile-landscape: '(max-width: #{$break-point-768 - 1}) and (orientation: landscape)';
+$media-screen-tablet: '(min-width: #{$break-point-768}) and (max-width: #{$break-point-992 - 1})';
+$media-not-desktop: '(max-width: #{$break-point-992 - 1})';
+$media-not-mobile: '(min-width: #{$break-point-768})';
+$media-desktop: '(min-width: #{$break-point-992})';
+$media-small-desktop: '(min-width: #{$break-point-992}) and (max-width: #{$break-point-1200 - 1})';
+$media-middle-desktop: '(min-width: #{$break-point-1200})';
+$media-large-desktop: '(min-width: #{$break-point-1400})';
+
+$media-below-640: '(max-width: #{$break-point-640})';
+$media-below-1200: '(max-width: #{$break-point-1200})';
+$media-below-768: '(max-width: #{$break-point-768 - 1})';
