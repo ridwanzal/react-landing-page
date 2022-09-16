@@ -1,0 +1,20 @@
+.btn {
+    padding: 8px 16px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &.default {
+        background-color: #eee;
+    }
+
+    &.light {
+        color: #444;
+        font-weight: 400;
+        font-family: 'Rubik', sans-serif;
+    }
+
+    &:hover{
+        opacity: .9;
+    }
+}

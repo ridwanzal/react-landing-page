@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="59.850853mm"
+   width="64.874313mm"
    height="28.959005mm"
-   viewBox="0 0 59.850853 28.959005"
+   viewBox="0 0 64.874313 28.959005"
    version="1.1"
    id="svg25414"
    inkscape:version="1.2.1 (9c6d41e, 2022-07-14)"
@@ -24,33 +24,29 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.1893044"
-     inkscape:cx="179.93711"
-     inkscape:cy="56.755865"
+     inkscape:zoom="3.3638608"
+     inkscape:cx="199.1759"
+     inkscape:cy="41.470206"
      inkscape:window-width="1728"
      inkscape:window-height="1001"
      inkscape:window-x="0"
      inkscape:window-y="38"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="g25885" />
   <defs
      id="defs25411" />
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-79.561862,-122.69422)">
+     transform="translate(-86.724183,-121.11792)">
     <g
-       id="g25409"
-       transform="translate(45.268458,93.347338)">
-      <rect
-         style="fill:#006a39;fill-opacity:1;stroke-width:0.321693"
+       id="g25885"
+       transform="translate(52.430779,91.771033)">
+      <path
          id="rect19748"
-         width="59.850853"
-         height="28.959005"
-         x="34.293404"
-         y="29.346886"
-         ry="5.2707434" />
+         style="fill:#006a39;fill-opacity:1;stroke-width:0.321693"
+         d="M 39.5644 29.346887 C 36.644411 29.346887 34.293404 31.697894 34.293404 34.617883 L 34.293404 53.035364 C 34.293404 55.955352 36.644411 58.305843 39.5644 58.305843 L 88.873535 58.305843 C 91.793524 58.305843 94.144014 55.955352 94.144014 53.035364 L 94.144014 50.093424 A 6.5283365 6.5283365 0 0 1 92.639197 50.271191 A 6.5283365 6.5283365 0 0 1 86.110913 43.742908 A 6.5283365 6.5283365 0 0 1 92.639197 37.214107 A 6.5283365 6.5283365 0 0 1 94.144014 37.389807 L 94.144014 34.617883 C 94.144014 31.697894 91.793524 29.346887 88.873535 29.346887 L 39.5644 29.346887 z " />
       <path
          id="path19685"
          style="font-size:24.3466px;line-height:1.25;font-family:COUTURE;-inkscape-font-specification:COUTURE;fill:#ffffff;stroke-width:0.174062"
@@ -63,6 +59,12 @@
          d="M 72.19453,49.439437 81.557435,38.334136 H 72.92792 v -3.200654 h 13.738775 v 3.006675 l -9.36291,11.105301 h 9.60737 v 3.200654 H 72.19453 Z"
          style="font-size:24.3466px;line-height:1.25;font-family:COUTURE;-inkscape-font-specification:COUTURE;fill:#ffffff;stroke-width:0.174062"
          id="path19687" />
+      <circle
+         style="opacity:1;fill:#c83737;fill-opacity:1;stroke-width:0.179787"
+         id="circle25801"
+         cx="92.639381"
+         cy="43.654465"
+         r="3.9488373" />
     </g>
   </g>
 </svg>
