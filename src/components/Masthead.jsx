@@ -2,19 +2,17 @@ function Masthead() {
     return (
             <div className="masthead-container">
                 <div className="wrapper">
-                    <div className="masthead-container--content">
+                    <div className="wrapper-inner topbottom masthead-container--content">
                         <div className="content">
-                            <img className="image-profile" src='./profile.jpeg'/>
-                        </div>
-                        <div className="content">
-                            <p className="text-big">
+                            <p>
                                 Hello there, welcome to my page
                             </p>
-                            <h1>My name is M. Ridwan Zalbina</h1>
-                            <p className="text-description">
-                                I'm a software engineer who creates digital products,
-                                designs, writes about frontend, backend and fullstack    
-                                developments. Check out my projects and articles I've written on subjects like design, security, front end development, or learn more about me.
+                            <h1>
+                           Software Engineer who work around fullstack development, but work as professional Front-End Developer.
+                            </h1>
+                            <p>
+                                I live in Indonesia, working remotely from home. Fairtech is my current company, I've been working here for almost 3 years.
+                                Help a lot of company to build their digital products.
                             </p>
                             <div className="social-list">
                                 <div className="social-list--item">
@@ -23,6 +21,9 @@ function Masthead() {
                                     <a className="btn default light">Email</a>
                                 </div>
                             </div>
+                        </div>
+                        <div className="content">
+                            <img className="image-profile" src='./profile.jpeg'/>
                         </div>
                     </div>
                 </div>

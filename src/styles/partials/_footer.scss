@@ -1,0 +1,13 @@
+.footer {
+    &-container {
+        border-top: solid 1px #eee;
+
+        @media #{$media-not-desktop}{
+            text-align: center;
+        }
+    }
+
+    &-content {
+        padding: 24px 0;
+    }
+}

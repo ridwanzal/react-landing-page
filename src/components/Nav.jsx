@@ -6,11 +6,11 @@ import githubBlack from '../assets/github-black.svg';
 function Nav() {
   return (
     <div className='nav-container'>
-        <div className='nav white nav-desktop'>
+        <div className='nav nav-desktop'>
           <div className='wrapper'>
             <ul className='nav-list'>
-              <li className="item logo">
-                  <a href="#"><img class="logo-item" src={logo} /></a>
+              <li className="item logoname">
+                  <a href="#">RIDWANZAL</a>
               </li>
               <li className="item">
                 <a href="#">About Me</a>
@@ -29,7 +29,7 @@ function Nav() {
             </ul>
           </div>
         </div>
-        <div className='nav white nav-mobile'>
+        <div className='nav nav-mobile'>
           <div className='logo'>
             <img className='logo-item' src={logo}/>
           </div>
