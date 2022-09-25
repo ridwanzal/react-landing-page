@@ -1,33 +1,37 @@
-function Masthead() {
+function SectionExpert() {
     return (
+        <>
             <div className="masthead-container">
                 <div className="wrapper">
                     <div className="wrapper-inner topbottom masthead-container--content">
-                        <div className="content left">
-                            <p>
-                                Hello there, welcome to my page
-                            </p>
+                        <div className="content">
                             <h1>
-                           Software Engineer who works around fullstack development, but works as professional Front-End Developer.
+                                Hello there, welcome to my page
                             </h1>
+                            <h3>My name is M. Ridwan Zalbina. You can call me Ridwan or Edo.</h3>
+                            <br/>
                             <p>
-                                I live in Indonesia, working remotely from home. I'm currently working on Digital Agency Company called Fairtech Technology, Ltd, located in Singapore, Jakarta and Makassar. I've been working here for almost 3 years.
-                                Help lot of company to build their digital products.
+                            Learn from the basic, and you will achieve a greatness. I belieave that,
+                            expertise comes from tough situation, discipline and continues learning.
+                            That's why, you need to hire professional to do the job. I help hundreds of clients
+                            to create their digital products, frome end-to-end process. We can help you with the design,
+                            code and maintain the product.
                             </p>
                             <div className="social-list">
                                 <div className="social-list--item">
                                     <a className="btn default outline light">Linkedin</a>
                                     <a className="btn default outline light">Instagram</a>
-                                    <a className="btn default outline light">Email</a>
                                     <a className="btn default outline light">Behance</a>
+                                    <a className="btn default outline light">Email</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </>
         )
     }
 
-export default Masthead
+export default SectionExpert
 

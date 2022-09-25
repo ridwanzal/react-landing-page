@@ -1,0 +1,53 @@
+
+.dark {
+    background-color: #151515;
+
+    .footer-container {
+        border-top: 1px solid #202022;
+    }
+
+    .nav {
+        background-color: #202022;
+        border-bottom: 1px solid #202022;
+
+        .wrapper {
+            max-width: 1140px;
+        }
+        
+        .nav-list {
+            .item {
+                a {
+                    color: #fff;
+
+                    &:hover {
+                        background-color: #151515;
+                    }
+                }
+
+                &.logoname {
+                    background-color: unset;
+                }
+            }
+        }
+    }
+    
+    h1,
+    h2, h3, h4, h5, h6,
+    ul,p,label, div, button, .card, span, .nav-container, a{ 
+        color: #fff;
+    }
+
+    small {
+        color: #5d5d5d;
+    }
+
+    .card, .section-expert--background {
+        background-color: #202022;
+        border: 1px solid #202022;
+    }
+    
+    .svg {
+        -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
+        filter: invert(100%);
+    }
+}

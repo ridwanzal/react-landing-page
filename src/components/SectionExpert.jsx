@@ -4,12 +4,12 @@ function SectionExpert() {
                 <div className="wrapper">
                     <div className="wrapper-inner">
                         <div className="wrapper-content">
-                            <h3>Professional Journey</h3>
+                            <h3>Professional journey</h3>
                             <div className="section-expert--background">
                                 <ul className="section-expert--list">
                                     <li>
                                         <div className="section-expert--list-item">
-                                            <div>Front End Developer (2016 - 2019)</div>
+                                            <div>Fullstack Developer (2016 - 2019)</div>
                                             <small>Easysoft Indonesia | PT easySoft Indonesia - Jakarta</small>
                                         </div>
                                     </li>
@@ -46,7 +46,7 @@ function SectionExpert() {
                                     <li>
                                         <div className="section-expert--list-item">
                                             <div>Front End Developer (2020 - Present)</div>
-                                            <small>Fairtech Pta, Ltd. - Singapore</small>
+                                            <small>Fairtech Pte, Ltd. - Singapore</small>
                                         </div>
                                     </li>
                                 </ul>

@@ -57,11 +57,8 @@
         font-weight: 500;
         font-size: 1rem;
         padding-left: 0;
-
         
         .item {
-            margin-right: 24px;
-            
             &.logo {
                 a {
                     padding: 12px;
@@ -74,11 +71,9 @@
 
             &.logoname {
                 font-weight: 700;
-                background-color: #eee;
             }
             
             a {
-                text-transform: uppercase;
                 display: block;
                 color: #000;
                 text-decoration: none;
@@ -92,7 +87,15 @@
             }
 
             &.right {
+                display: flex;
                 margin-left: auto;
+
+                .button-switch {
+                    .dark-mode-btn {
+                        position: relative;
+                        top: 10px;
+                    }
+                }
             }
 
             .icon-github {

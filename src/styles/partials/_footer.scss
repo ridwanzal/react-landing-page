@@ -9,5 +9,37 @@
 
     &-content {
         padding: 24px 0;
+        display: block;
+        color: #808080;
+        font-size: 14px;
+        @media #{$media-not-desktop}{ 
+            text-align: center;
+            display: inline-block;
+        }
+
+        .left {
+            display: inline;
+            text-align: left;
+            @media #{$media-not-desktop}{ 
+                display: block;
+                display: inline-block;
+                margin-bottom: 8px;
+            }
+        }
+
+        .right {
+            display: inline;
+            margin-left: auto;
+            float: right;
+            
+            @media #{$media-not-desktop}{ 
+                display: block;
+                display: inline-block;
+                margin-right: auto;
+                margin-left: auto;
+                float: unset;
+                margin-bottom: 8px;
+            }
+        }
     }
 }

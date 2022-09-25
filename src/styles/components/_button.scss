@@ -1,20 +1,36 @@
 .btn {
     padding: 8px 16px;
-    margin-bottom: 8px;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 14px;
 
     &.default {
         background-color: #eee;
+
+        &.outline {
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
     }
 
     &.light {
         color: #444;
-        font-weight: 400;
+        font-weight: 300;
         font-family: 'Rubik', sans-serif;
     }
 
     &:hover{
         opacity: .9;
+    }
+}
+
+
+.dark {
+    .btn {
+        &.default {
+            background-color: #202022;
+            border: 1px solid #505050;
+            color: #fff;
+        }
     }
 }
