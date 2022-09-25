@@ -95,6 +95,7 @@
                     margin-top: 32px;
                     &--item {
                         a {
+                            text-decoration: none;
                             &:not(:first-of-type){
                                 margin-left: 8px;
                             }
