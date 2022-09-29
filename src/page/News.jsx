@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 import SectionProfile from '../components/SectionProfile';
 import { useState, useEffect } from "react";
 
-function About() {
+function News() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -12,13 +12,11 @@ function About() {
   useEffect(() => {
     fetch(`https://dev.to/api/articles/`)
       .then((response) => {
-        console.log(response)
         if (!response.ok) {
           throw new Error(
             `This is an HTTP error: The status is ${response.status}`
           );
         }
-        console.log(response);
         return response.json();
       })
       .then((actualData) => {
@@ -52,4 +50,4 @@ function About() {
   )
 }
 
-export default About
+export default News

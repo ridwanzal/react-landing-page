@@ -123,20 +123,20 @@
                 border-bottom: 1px solid #000;
             
                 .nav-list {
-                        .item {
-                            a {
-                                color: #fff;
-                                &:hover {
-                                    background-color: #000;
-                                    transition: all .1s;
-                                }
+                    .item {
+                        a {
+                            color: #fff;
+                            &:hover {
+                                background-color: #000;
+                                transition: all .1s;
                             }
                         }
-    
-                        &.logoname {
-                            font-weight: 700;
-                            background-color: #000;
-                        }
+                    }
+
+                    &.logoname {
+                        font-weight: 700;
+                        background-color: #000;
+                    }
                 }
             }
         }
@@ -191,6 +191,7 @@
                 a {
                     float: right;
                     display: block;
+                    text-decoration: none;
                 }
             }
         }

@@ -1,5 +1,6 @@
 import './styles/styles.scss'
 import Home from './page/Home'
+import News from './page/News'
 import About from './page/About'
 import Nav from './components/Nav'
 
@@ -11,14 +12,14 @@ import {
 
 function App() {
   return (
-    <div> 
+    <div>
       <main className='section'>
         <BrowserRouter>
           <Nav></Nav>
           <Routes>
-            <Route path="/about" element={<About/>}>
+            <Route path="/news" element={<News />}>
             </Route>
-            <Route exact path="/" element={<Home/>}>
+            <Route exact path="/" element={<Home />}>
             </Route>
           </Routes>
         </BrowserRouter>
