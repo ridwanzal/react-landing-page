@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import SectionProfile from '../components/SectionProfile';
 import { useState, useEffect } from "react";
 
+
 function News() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -33,19 +34,29 @@ function News() {
 
   return (
     <div>
-      <h1>API Posts</h1>
-      {loading && <div>A moment please...</div>}
-      {error && (
-        <div>{`There is a problem fetching the post data - ${error}`}</div>
-      )}
-      <ul>
-        {data &&
-          data.map(({ id, title }) => (
-            <li key={id}>
-              <h3>{title}</h3>
-            </li>
-          ))}
-      </ul>
+      <div className="section-general">
+        <div className="wrapper">
+            <div className="wrapper-inner">
+              <div className="wrapper-content">
+                <div className='section-news'>
+                  <h4>Dev to feed</h4>
+                  {loading && <div>A moment please...</div>}
+                  {error && (
+                    <div>{`There is a problem fetching the post data - ${error}`}</div>
+                  )}
+                  <ul>
+                    {data &&
+                      data.map(({ id, title, url }) => (
+                        <li key={id}>
+                          <a href={url} target="_blank">{title}</a>
+                        </li>
+                      ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
     </div>
   )
 }

@@ -46,4 +46,18 @@ div, section {
         background-color: #202022;
         border: 1px solid #505050;
     }
+
+    a {
+        &:hover {
+            color: $color-gray-soft !important;
+        }
+    }
+}
+
+.tohide {
+    display: none !important
+}
+
+.toshow {
+    display: block !important;
 }

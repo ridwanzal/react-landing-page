@@ -279,4 +279,28 @@
             }
         }
     }
+
+    &-news {
+        ul {
+            margin-left: 0;
+            padding-left: 0;
+            list-style: none;
+
+            li {
+                padding: 16px 0;
+                border-bottom: 1px solid #ccc;
+
+                a {
+                    display: block;
+                    text-decoration: none;
+                    color: $color-black-medium;
+                    transition: all .2s linear;
+
+                    &:hover {
+                        color: $color-black;
+                    }
+                }
+            }
+        }
+    }
 }

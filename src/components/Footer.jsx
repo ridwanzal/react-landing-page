@@ -1,6 +1,10 @@
+import { useState, useEffect } from 'react';
 import { printYear } from '../utils/commonUtils';
-function Footer() {
+import countapi from 'countapi-js';
 
+function Footer() {
+    const [data, setData] = useState(null);
+    
     return (
         <div className="footer-container">
             <div className="wrapper">
