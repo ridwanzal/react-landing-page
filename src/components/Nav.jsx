@@ -23,6 +23,12 @@ function Nav() {
               <Link to="/">RIDWANZAL</Link>
             </li>
             <li className='item'>
+              <Link to="/about">Portfolio</Link>
+            </li>
+            <li className='item'>
+              <Link to="/portfolio">Portfolio</Link>
+            </li>
+            <li className='item'>
               <Link to="/news">News</Link>
             </li>
             <li className='item right'>

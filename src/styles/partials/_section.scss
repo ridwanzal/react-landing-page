@@ -4,7 +4,7 @@
     max-width: 1140px;
 
     &-inner {
-        padding: 0 72px;
+        padding: 0 0;
 
         @media #{$media-not-desktop}{ 
             padding: 0 16px;
@@ -17,8 +17,6 @@
     }
 
     &-content {
-        padding: 0 29px;
-
         @media #{$media-not-desktop}{  
             padding: 0 16px;
         }
@@ -43,7 +41,6 @@
         
             .content {
                 text-align: left;
-                padding: 29px;
 
                 @media #{$media-not-desktop}{ 
                     padding: 8px;

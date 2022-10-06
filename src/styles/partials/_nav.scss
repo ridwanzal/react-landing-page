@@ -71,6 +71,15 @@
 
             &.logoname {
                 font-weight: 700;
+                
+                a {
+                    padding: 16px 16px 16px 0;
+
+                    &:hover {
+                        background-color: #fff;
+                        transition: all .1s;
+                    }
+                }
             }
             
             a {
@@ -78,7 +87,7 @@
                 color: #000;
                 text-decoration: none;
                 padding: 16px;
-                
+
                 &:hover {
                     background-color: #eee;
                     transition: all .1s;

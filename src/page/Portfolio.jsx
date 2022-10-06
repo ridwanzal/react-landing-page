@@ -1,5 +1,6 @@
 import '../styles/styles.scss';
-import { Image, Shimmer } from 'react-shimmer'
+import { Image, Shimmer } from 'react-shimmer';
+import Footer from '../components/Footer';
 
 function Portfolio() { 
     return ( 
@@ -18,6 +19,7 @@ function Portfolio() {
                 </div>
             </div>
         </div>
+        <Footer></Footer>
         </>
     );
 }
