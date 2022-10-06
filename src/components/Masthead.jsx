@@ -11,7 +11,7 @@ function Masthead() {
                             Software Engineer who works around fullstack development, but works as professional Front-End Developer.
                         </h1>
                         <p>
-                            I live in Indonesia, working remotely from home. I'm currently working on Digital Agency Company called Fairtech Technology, Ltd, located in Singapore, Jakarta and Makassar. I've been working here for almost 3 years.
+                            I live in Indonesia, working remotely from home. I work for Digital Agency Company called Fairtech Technology, Ltd, located in Singapore, Jakarta and Makassar, been working here for almost 3 years.
                             Help lot of company to build their digital products.
                         </p>
                         <div className="social-list">

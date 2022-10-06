@@ -2,7 +2,9 @@ import './styles/styles.scss';
 import Home from './page/Home';
 import News from './page/News';
 import Nav from './components/Nav';
-import Portfolio from './page/Portfolio';
+import Designs from './page/Designs';
+import Projects from './page/Projects';
+import Contact from './page/Contact';
 
 import {
   BrowserRouter,
@@ -19,7 +21,11 @@ function App() {
           <Routes>
             <Route path="/news" element={<News />}>
             </Route>
-            <Route path="/portfolio" element={<Portfolio />}>
+            <Route path="/projects" element={<Projects />}>
+            </Route>
+            <Route path="/designs" element={<Designs />}>
+            </Route>
+            <Route path="/contact" element={<Contact />}>
             </Route>
             <Route exact path="/" element={<Home />}>
             </Route>
