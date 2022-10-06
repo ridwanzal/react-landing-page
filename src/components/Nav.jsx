@@ -23,7 +23,7 @@ function Nav() {
               <Link to="/">RIDWANZAL</Link>
             </li>
             <li className='item'>
-              <Link to="/about">Portfolio</Link>
+              <Link to="/about">About</Link>
             </li>
             <li className='item'>
               <Link to="/portfolio">Portfolio</Link>
