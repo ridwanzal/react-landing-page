@@ -6,6 +6,7 @@ import Designs from './page/Designs';
 import Projects from './page/Projects';
 import Contact from './page/Contact';
 import Login from './page/backview/Login';
+import NotFound from './page/NotFound';
 
 import {
   BrowserRouter,
@@ -31,6 +32,8 @@ function App() {
             <Route exact path="/login" element={<Login />}>
             </Route>
             <Route exact path="/" element={<Home />}>
+            </Route>
+            <Route exact path="*" element={<NotFound/>}>
             </Route>
           </Routes>
         </BrowserRouter>

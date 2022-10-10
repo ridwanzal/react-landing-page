@@ -1,5 +1,6 @@
 import '../styles/styles.scss';
 import { Image, Shimmer } from 'react-shimmer';
+import comingSoon from '../assets/coming-soon.jpeg';
 import Footer from '../components/Footer';
 
 function Projects() { 
@@ -9,7 +10,15 @@ function Projects() {
             <div className="wrapper">
                 <div className="wrapper-inner">
                     <div className="wrapper-content">
-                        <h3>Under construction</h3>
+                        <div className='center'>
+                            <h3>Page still in progress</h3>
+                            <Image
+                                    width="100%"
+                                src={comingSoon}
+                                fallback={<Shimmer width={'100%'} height={400} />}
+                            />
+                            <p>Thank you so much for visiting this page. We still working on it. Stay tune.</p>
+                        </div>
                     </div>
                 </div>
             </div>

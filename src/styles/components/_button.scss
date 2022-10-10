@@ -3,6 +3,7 @@
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
+    transition: all .2s;
 
     &.default {
         background-color: #eee;
@@ -10,13 +11,27 @@
         &.outline {
             background-color: #fff;
             border: 1px solid #ddd;
+
+            &:hover {
+                background-color: #eee;
+            }
         }
     }
 
     &.light {
         color: #444;
-        font-weight: 300;
+        font-weight: 400;
         font-family: 'Rubik', sans-serif;
+    }
+
+    &.yellow {
+        background-color: #ffd900;
+        font-weight: 600;
+        color: #444;
+
+        &.outline { 
+            border: 1px solid #ffd900;
+        }
     }
 
     &:hover{

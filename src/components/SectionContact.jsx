@@ -10,7 +10,7 @@ function SectionContact() {
                                     <h3 className="light">Let's create your stunning digital products now </h3>
                                 </div>
                                 <div className="right">
-                                    <a className="btn default outline light" href="https://wa.me/6281919992000" target="_blank">
+                                    <a className="btn yellow outline light" href="https://wa.me/6281919992000" target="_blank">
                                         Send me a message
                                     </a>
                                 </div>

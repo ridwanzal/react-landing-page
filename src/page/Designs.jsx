@@ -1,4 +1,5 @@
 import '../styles/styles.scss';
+import comingSoon from '../assets/coming-soon.jpeg';
 import { Image, Shimmer } from 'react-shimmer';
 import Footer from '../components/Footer';
 
@@ -9,12 +10,15 @@ function Designs() {
             <div className="wrapper">
                 <div className="wrapper-inner">
                     <div className="wrapper-content">
-                        <h3>Under construction</h3>
-                        {/* <Image
-                                width="100%"
-                            src='https://source.unsplash.com/random/800x600'
-                            fallback={<Shimmer width={'100%'} height={900} />}
-                        /> */}
+                        <div className='center'>
+                            <h3>Page still in</h3>
+                            <Image
+                                    width="100%"
+                                src={comingSoon}
+                                fallback={<Shimmer width={'100%'} height={400} />}
+                            />
+                            <p>Thank you so much for visiting this page. We still working on it. Stay tune.</p>
+                        </div>
                     </div>
                 </div>
             </div>

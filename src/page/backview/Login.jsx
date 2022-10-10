@@ -18,7 +18,7 @@ function Designs() {
                             <input className='form-in' placeholder='Password'></input>
                         </div>
                         <br/>
-                        <button type="submit" className='mybtn'>
+                        <button type="submit" className='btn default outline light'>
                             Login
                         </button>
                     </div>
