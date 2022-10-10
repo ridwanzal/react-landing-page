@@ -5,6 +5,7 @@ import Nav from './components/Nav';
 import Designs from './page/Designs';
 import Projects from './page/Projects';
 import Contact from './page/Contact';
+import Login from './page/backview/Login';
 
 import {
   BrowserRouter,
@@ -26,6 +27,8 @@ function App() {
             <Route path="/designs" element={<Designs />}>
             </Route>
             <Route path="/contact" element={<Contact />}>
+            </Route>
+            <Route exact path="/login" element={<Login />}>
             </Route>
             <Route exact path="/" element={<Home />}>
             </Route>
