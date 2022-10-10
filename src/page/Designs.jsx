@@ -11,9 +11,9 @@ function Designs() {
                 <div className="wrapper-inner">
                     <div className="wrapper-content">
                         <div className='center'>
-                            <h3>Page still in</h3>
+                            <h3>Page still in progress</h3>
                             <Image
-                                    width="100%"
+                                width="100%"
                                 src={comingSoon}
                                 fallback={<Shimmer width={'100%'} height={400} />}
                             />
