@@ -23,6 +23,7 @@
             top: 0;
         }
 
+
         .logo {
             text-align: center;
             padding: 16px 8px;
@@ -43,26 +44,34 @@
             }
         }
 
-        .nav-list {
-            display: flex;
-            width: 100%;
+        .nav-list-mobile {
+            display: none;
+            text-align: left;
+            list-style: none;
             padding-left: 0;
-            overflow-x: auto;
-            
-            .item {
-                margin-right: 0;
-                display: inline-block;
-                display: block;
-                text-align: center;
-                min-width: 150px;
-                border-bottom: 1px solid #fcfcfc;
-                
+            margin-left: 0;
+            height: 100vh;
+            transition: all ease .2s;
+
+            li {
                 a {
-                    background-color: #eee;
-                    margin: 8px;                
-                    border-radius: 4px;
-                    border: 1px solid #ddd  ;    
+                    display: block;
+                    text-decoration: none;
+                    padding: 4px 12px;
                 }
+                border-bottom: 1px solid #eee;
+
+                &:last-child {
+                    border-bottom: 0;
+                }
+            }
+
+            &.show {
+                display: block;
+            }
+
+            &.hide {
+                display: none;
             }
         }
     }

@@ -6,4 +6,14 @@
     img, i {
         margin-right: 16px;
     }
+
+    @media #{$media-not-desktop} {  
+        border-bottom: 0;
+
+        &.last {
+            &:last-child {
+                border-bottom: 1px solid #ddd;
+            }
+        }
+    }
 }
