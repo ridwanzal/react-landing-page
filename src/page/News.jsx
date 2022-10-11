@@ -39,7 +39,7 @@ function News() {
             <div className="wrapper-inner">
               <div className="wrapper-content">
                 <div className='section-news'>
-                  <h4>Dev to feed</h4>
+                  <h3>Dev to feed</h3>
                   {loading && <div>A moment please...</div>}
                   {error && (
                     <div>{`There is a problem fetching the post data - ${error}`}</div>
