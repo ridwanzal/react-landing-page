@@ -96,6 +96,21 @@
                             &:not(:first-of-type){
                                 margin-left: 8px;
                             }
+
+                            .icon-ig {
+                                position: relative;
+                                top: -2px;
+                            }
+
+                            .icon-ln {
+                                position: relative;
+                                top: -2px;
+                            }
+
+                            svg {
+                                position: relative;
+                                top: 3px;
+                            }
                         }
                     }
                 }
@@ -146,6 +161,12 @@
 
     &-general {
         margin-bottom: 24px;
+
+        @media #{$media-not-desktop}{   
+            &:first-child {
+                margin-top: 72px;
+            }
+        }
     }
 
     &-contact {

@@ -22,7 +22,7 @@ function App() {
         <BrowserRouter>
           <Nav></Nav>
           <Routes>
-            <Route path="/news" element={<News />}>
+            <Route path="/articles" element={<News />}>
             </Route>
             <Route path="/projects" element={<Projects />}>
             </Route>

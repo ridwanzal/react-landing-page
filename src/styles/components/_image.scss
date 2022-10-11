@@ -1,0 +1,6 @@
+.image {
+    width: 100%;
+    @media #{$media-not-desktop}{ 
+        width: auto;    
+    }
+}
