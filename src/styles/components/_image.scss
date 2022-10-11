@@ -4,3 +4,18 @@
         width: auto;    
     }
 }
+
+.image-helping {
+    position: absolute;
+    width: 370px;
+    right: 0;
+    bottom: 110px;
+
+    @media #{$media-not-desktop}{  
+        display: none;
+    }
+}
+
+.image-helping-wraps {
+    position: relative;
+}
