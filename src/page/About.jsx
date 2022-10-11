@@ -1,8 +1,27 @@
 import '../styles/styles.scss';
 import { Image, Shimmer } from 'react-shimmer';
 import Footer from '../components/Footer';
+import GitHubCalendar from 'react-github-calendar';
 
 function About() { 
+
+    const selectLastHalfYear = contributions => {
+        const currentYear = new Date().getFullYear();
+        const currentMonth = new Date().getMonth();
+        const shownMonths = 6;
+      
+        return contributions.filter(day => {
+          const date = new Date(day.date);
+          const monthOfDay = date.getMonth();
+      
+          return (
+            date.getFullYear() === currentYear &&
+            monthOfDay > currentMonth - shownMonths &&
+            monthOfDay <= currentMonth
+          );
+        });
+      };
+
     return ( 
         <>
         <div className="section-general">
@@ -13,7 +32,7 @@ function About() {
                         <p>
                         Hello there, my name is M. Ridwan Zalbina, people call me "Edo" or "Ridwan", Software Engineer who works around fullstack development, but works as professional Front-End Developer. Really passionate to learn everything about technology: software engineering, visual design and information security.
                         </p>
-                        <h3>Work</h3>
+                        <h3>Work</h3>   
                         <p>
                         I'm currently working on Digital Agency Company called Fairtech Technology, Ltd, located in Singapore, Jakarta and Makassar.
                         </p>
@@ -68,6 +87,13 @@ function About() {
                             Experience more than 10 years on logo, advertisment, promotional content.
                             </li>
                         </ul>
+                        <h3>Github Calendar</h3>
+                        <GitHubCalendar 
+                        username="ridwanzal" 
+                        transformData 
+                        hideTotalCount 
+                        hideColorLegend
+                        />
                     </div>
                 </div>
             </div>
