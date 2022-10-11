@@ -4,8 +4,7 @@ import Footer from '../components/Footer';
 import SectionProfile from '../components/SectionProfile';
 import { useState, useEffect } from "react";
 
-
-function News() {
+function About() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -13,11 +12,13 @@ function News() {
   useEffect(() => {
     fetch(`https://dev.to/api/articles/`)
       .then((response) => {
+        console.log(response)
         if (!response.ok) {
           throw new Error(
             `This is an HTTP error: The status is ${response.status}`
           );
         }
+        console.log(response);
         return response.json();
       })
       .then((actualData) => {
@@ -34,32 +35,21 @@ function News() {
 
   return (
     <div>
-      <div className="section-general">
-        <div className="wrapper">
-            <div className="wrapper-inner">
-              <div className="wrapper-content">
-                <div className='section-news'>
-                  <h3>Dev to feed</h3>
-                  {loading && <div>A moment please...</div>}
-                  {error && (
-                    <div>{`There is a problem fetching the post data - ${error}`}</div>
-                  )}
-                  <ul>
-                    {data &&
-                      data.map(({ id, title, url }) => (
-                        <li key={id}>
-                          <a href={url} target="_blank">{title}</a>
-                        </li>
-                      ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-        </div>
-      </div>
-      <Footer></Footer>
+      <h1>API Posts</h1>
+      {loading && <div>A moment please...</div>}
+      {error && (
+        <div>{`There is a problem fetching the post data - ${error}`}</div>
+      )}
+      <ul>
+        {data &&
+          data.map(({ id, title }) => (
+            <li key={id}>
+              <h3>{title}</h3>
+            </li>
+          ))}
+      </ul>
     </div>
   )
 }
 
-export default News
+export default About
