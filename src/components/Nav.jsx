@@ -2,6 +2,7 @@ import '../styles/styles.scss'
 import logo from '../assets/rwz.svg';
 import github from '../assets/github.svg';
 import githubBlack from '../assets/github-black.svg';
+import logoMain from '../assets/logo.png';
 import { Link } from "react-router-dom";
 import React, { useState } from 'react';
 
@@ -21,11 +22,6 @@ function Nav() {
   }
 
   let menu = [
-    {
-      name : 'RIDWANZAL',
-      link: '/',
-      addClass: 'item logoname'
-    },
     {
       name : 'About',
       link: '/about',
@@ -53,6 +49,10 @@ function Nav() {
       <div className='nav nav-desktop'>
         <div className='wrapper'>
           <ul className='nav-list'>
+              <li className="item logoname">
+                  <a href="/">
+                    <img className='main-logo' src={logoMain} alt="" width="20"/>&nbsp;RIDWANZAL</a>
+              </li>
               {menu &&
                 menu.map(({ name, link, addClass }) => (
                   <li key={name} className={addClass}>
