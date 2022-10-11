@@ -12,17 +12,33 @@
     }
     
     &.nav-mobile {
+        z-index: 10;
         display: none;
+        background-color: $color-white;
+
         @media #{$media-not-desktop} { 
             display: block;
+            position: fixed;
+            width: 100%;
+            top: 0;
         }
 
         .logo {
             text-align: center;
-            padding: 8px;
+            padding: 16px 8px;
+            
+            .menu {
+                float: right;
+                position: relative;
+                top: -3px;
+            }
 
             .logo-item {
                 height: 30px;
+            }
+
+            a {
+                color: #000;
             }
         }
 

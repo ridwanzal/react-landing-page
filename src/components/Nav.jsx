@@ -48,6 +48,9 @@ function Nav() {
       <div className='nav nav-mobile'>
         <div className='logo'>
           <Link to="/">RIDWANZAL</Link>
+          <button className='menu bi-justify-right'>
+            
+          </button>
         </div>
       </div>
     </div>
