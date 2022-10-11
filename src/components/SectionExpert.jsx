@@ -1,6 +1,9 @@
+import helping from '../assets/helping.png';
+import { Image, Shimmer } from 'react-shimmer';
+
 function SectionExpert() {
     return (
-        <div className="section-general">
+        <div className="section-general gray">
             <div className="wrapper">
                 <div className="wrapper-inner">
                     <div className="wrapper-content">
@@ -50,6 +53,9 @@ function SectionExpert() {
                                     </div>
                                 </li>
                             </ul>
+                            <div className='image-helping-wraps'>
+                                <img className='image-helping' src={helping}/>
+                            </div>
                         </div>
                     </div>
                 </div>

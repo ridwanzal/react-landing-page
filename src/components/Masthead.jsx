@@ -16,7 +16,7 @@ function Masthead() {
                         </p>
                         <div className="social-list">
                             <div className="social-list--item">
-                                <a className="btn default outline light" href="https://www.linkedin.com/in/mridwanzalbina/" target="_blank"><i className="icon-ln bi bi-linkedin"></i>&nbsp;&nbsp;Linkedin</a>
+                                <a className="btn default outline light" href="https://www.linkedin.com/in/mridwanzalbina/" target="_blank"><i className="icon-ln    bi bi-linkedin"></i>&nbsp;&nbsp;Linkedin</a>
                                 <a className="btn default outline light" href="https://instagram.com/ridwanzal" target="_blank"><i className="icon-ig bi bi-instagram"></i>&nbsp;&nbsp;Instagram</a>
                                 <a className="btn default outline light" href="https://www.behance.net/ridwanzal" target="_blank">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-behance" viewBox="0 0 16 16">

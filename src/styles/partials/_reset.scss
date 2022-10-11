@@ -52,6 +52,13 @@ div, section {
             color: $color-gray-soft !important;
         }
     }
+
+    .section-general { 
+        &.gray {
+            background-color: #202022;
+            border: 1px solid #202022;
+        }
+    }
 }
 
 .tohide {
