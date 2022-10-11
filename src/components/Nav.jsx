@@ -7,11 +7,16 @@ import React, { useState } from 'react';
 
 function Nav() {
   const [isClicked, setIsClicked] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
   function toggleMode() {
     let element = document.body;
     element.classList.toggle("dark");
     setIsClicked(isClicked => !isClicked);
+  }
+
+  const toggleMenuMobile = () => {
+    setShowMenu(!showMenu)
   }
 
   return (
@@ -48,10 +53,24 @@ function Nav() {
       <div className='nav nav-mobile'>
         <div className='logo'>
           <Link to="/">RIDWANZAL</Link>
-          <button className='menu bi-justify-right'>
-            
+          <button className='menu bi-justify-right' onClick={toggleMenuMobile}>
+          {showMenu ? "" : ""}
           </button>
         </div>
+        <ul className={`nav-list-mobile ${showMenu ? "show" : "hide"}`}>
+          <li className="item">
+            <Link to="/about">About</Link>
+          </li>
+          <li className='item'>
+            <Link to="/designs">Design</Link>
+          </li>
+          <li className='item'>
+            <Link to="/projects">Projects</Link>
+          </li>
+          <li className='item'>
+            <Link to="/news">Articles</Link>
+          </li>
+        </ul>
       </div>
     </div>
   )

@@ -38,7 +38,7 @@ function SectionExpert() {
                                         </div>
                                     </li>
                                     <li className="item">
-                                        <div className="card">
+                                        <div className="card last">
                                             <i className="bi bi-ui-radios-grid"></i>
                                             <span>Brand Identity Design</span>
                                         </div>
