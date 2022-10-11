@@ -22,6 +22,9 @@ function Nav() {
             <li className="item logoname">
               <Link to="/">RIDWANZAL</Link>
             </li>
+            <li className="item">
+              <Link to="/about">About</Link>
+            </li>
             <li className='item'>
               <Link to="/designs">Design</Link>
             </li>
@@ -29,10 +32,7 @@ function Nav() {
               <Link to="/projects">Projects</Link>
             </li>
             <li className='item'>
-              <Link to="/contact">Contact</Link>
-            </li>
-            <li className='item'>
-              <Link to="/news">News</Link>
+              <Link to="/news">Articles</Link>
             </li>
             <li className='item right'>
               <div className='button-switch'>
