@@ -1,0 +1,27 @@
+[
+    {
+      name : 'RIDWANZAL',
+      link: '/',
+      addClass: 'item logoname'
+    },
+    {
+      name : 'About',
+      link: '/about',
+      addClass: 'item'
+    },
+    {
+      name : 'Design',
+      link: '/designs',
+      addClass: 'item'
+    },
+    {
+      name : 'Projects',
+      link: '/projects',
+      addClass: 'item'
+    },
+    {
+      name : 'Articles',
+      link: '/articles',
+      addClass: 'item'
+    }
+  ]

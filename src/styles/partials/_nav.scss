@@ -50,14 +50,14 @@
             list-style: none;
             padding-left: 0;
             margin-left: 0;
-            height: 100vh;
+            height: calc(100vh - 50px);
             transition: all ease .2s;
 
             li {
                 a {
                     display: block;
                     text-decoration: none;
-                    padding: 4px 12px;
+                    padding: 8px 24px;
                 }
                 border-bottom: 1px solid #eee;
 

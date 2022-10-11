@@ -19,7 +19,7 @@ function SectionExpert() {
                             </p>
                             <div className="social-list">
                                 <div className="social-list--item">
-                                    <a className="btn default outline light">Linkedin</a>
+                                    <a className="btn default outline light"><i className="bi-behance"></i>Linkedin</a>
                                     <a className="btn default outline light">Instagram</a>
                                     <a className="btn default outline light">Behance</a>
                                     <a className="btn default outline light">Email</a>

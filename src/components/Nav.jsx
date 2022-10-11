@@ -16,29 +16,49 @@ function Nav() {
   }
 
   const toggleMenuMobile = () => {
+    console.log(showMenu)
     setShowMenu(!showMenu)
   }
+
+  let menu = [
+    {
+      name : 'RIDWANZAL',
+      link: '/',
+      addClass: 'item logoname'
+    },
+    {
+      name : 'About',
+      link: '/about',
+      addClass: 'item'
+    },
+    {
+      name : 'Design',
+      link: '/designs',
+      addClass: 'item'
+    },
+    {
+      name : 'Projects',
+      link: '/projects',
+      addClass: 'item'
+    },
+    {
+      name : 'Articles',
+      link: '/articles',
+      addClass: 'item'
+    }
+  ]
 
   return (
     <div className='nav-container'>
       <div className='nav nav-desktop'>
         <div className='wrapper'>
           <ul className='nav-list'>
-            <li className="item logoname">
-              <Link to="/">RIDWANZAL</Link>
-            </li>
-            <li className="item">
-              <Link to="/about">About</Link>
-            </li>
-            <li className='item'>
-              <Link to="/designs">Design</Link>
-            </li>
-            <li className='item'>
-              <Link to="/projects">Projects</Link>
-            </li>
-            <li className='item'>
-              <Link to="/news">Articles</Link>
-            </li>
+              {menu &&
+                menu.map(({ name, link, addClass }) => (
+                  <li key={name} className={addClass}>
+                    <a href={link}>{name}</a>
+                  </li>
+              ))}
             <li className='item right'>
               <div className='button-switch'>
                 <button className="dark-mode-btn" onClick={toggleMode}>{isClicked ? "Light ☼" : "Dark ☾"}</button>
