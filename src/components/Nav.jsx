@@ -1,6 +1,4 @@
 import '../styles/styles.scss'
-import logo from '../assets/rwz.svg';
-import github from '../assets/github.svg';
 import githubBlack from '../assets/github-black.svg';
 import logoMain from '../assets/logo.png';
 import { Link } from "react-router-dom";
@@ -20,29 +18,29 @@ function Nav() {
     console.log(showMenu)
     setShowMenu(!showMenu)
   }
-
-  let menu = [
+  
+  const menu = [
     {
-      name : 'About',
-      link: '/about',
-      addClass: 'item'
+        "name": "About",
+        "link": "/about",
+        "addClass": "item"
     },
     {
-      name : 'Design',
-      link: '/designs',
-      addClass: 'item'
+        "name": "Designs",
+        "link": "/designs",
+        "addClass": "item"
     },
     {
-      name : 'Projects',
-      link: '/projects',
-      addClass: 'item'
+        "name": "Projects",
+        "link": "/projects",
+        "addClass": "item"
     },
     {
-      name : 'Articles',
-      link: '/articles',
-      addClass: 'item'
+        "name": "Articles",
+        "link": "/articles",
+        "addClass": "item"
     }
-  ]
+  ];
 
   return (
     <div className='nav-container'>
@@ -50,13 +48,13 @@ function Nav() {
         <div className='wrapper'>
           <ul className='nav-list'>
               <li className="item logoname">
-                  <a href="/">
-                    <img className='main-logo' src={logoMain} alt="" width="20"/>&nbsp;RIDWANZAL</a>
+                  <Link to="/">
+                    <img className='main-logo' src={logoMain} alt="" width="20"/>&nbsp;RIDWANZAL</Link>
               </li>
               {menu &&
                 menu.map(({ name, link, addClass }) => (
                   <li key={name} className={addClass}>
-                    <a href={link}>{name}</a>
+                    <Link to={link}>{name}</Link>
                   </li>
               ))}
             <li className='item right'>
