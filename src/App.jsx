@@ -30,13 +30,11 @@ function App() {
             </Route>
             <Route path="/contact" element={<Contact />}>
             </Route>
-            <Route exact path="/login" element={<Login />}>
+            <Route path="/login" element={<Login />}>
             </Route>
-            <Route exact path="/" element={<Home />}>
+            <Route path="/about" element={<About />}>
             </Route>
-            <Route exact path="/about" element={<About />}>
-            </Route>
-            <Route exact path="*" element={<NotFound/>}>
+            <Route path="/" element={<Home />}>
             </Route>
           </Routes>
         </BrowserRouter>

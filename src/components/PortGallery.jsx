@@ -1,5 +1,4 @@
 function PortGallery({object}) { 
-   
     return ( 
         <>
             <ul>

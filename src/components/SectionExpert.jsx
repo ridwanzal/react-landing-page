@@ -1,5 +1,4 @@
-import helping from '../assets/helping.png';
-import { Image, Shimmer } from 'react-shimmer';
+import helping from '../assets/helping.svg';
 
 function SectionExpert() {
     return (

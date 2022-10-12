@@ -1,5 +1,4 @@
 import '../styles/styles.scss';
-import { Image, Shimmer } from 'react-shimmer';
 import Footer from '../components/Footer';
 
 function Projects() { 

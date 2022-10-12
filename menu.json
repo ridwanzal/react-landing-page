@@ -1,0 +1,22 @@
+[
+    {
+        "name": "About",
+        "link": "/about",
+        "addClass": "item"
+    },
+    {
+        "name": "Designs",
+        "link": "/designs",
+        "addClass": "item"
+    },
+    {
+        "name": "Projects",
+        "link": "/projects",
+        "addClass": "item"
+    },
+    {
+        "name": "Articles",
+        "link": "/articles",
+        "addClass": "item"
+    }
+]
