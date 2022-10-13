@@ -6,6 +6,7 @@ import {Routes, Route, useNavigate} from 'react-router-dom';
 function Designs() { 
     const [errMsg, setErrMsg] = useState({});
     const [isSubmitted, setSubmitted] = useState(false);
+    const navigate = useNavigate();
     
     let authData = [
         {
@@ -36,8 +37,9 @@ function Designs() {
         console.log(authenticated)
         
         if(authenticated){
-            if(authenticated.password === password.value) {
+            if(authenticated.password.toString() === password.value.toString()) {
                 setSubmitted(true);
+                navigate('/about');
             }else{
                 setErrMsg({ name: "password", message: errors.password });
             }
