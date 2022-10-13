@@ -16,10 +16,10 @@ npm install
 ### Run on dev 
 
 ```js
-    npm run dev
+npm run dev
 ```
 
 ### Build for producrtion
 ```
-    npm run build
+npm run build
 ```
