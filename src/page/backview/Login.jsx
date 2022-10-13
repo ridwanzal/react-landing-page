@@ -19,7 +19,7 @@ function Designs() {
         }
     ];
     
-    let errors = {
+    let errors = {              
         credential : 'Invalid credential',
         password: 'Wrong password'
     };
