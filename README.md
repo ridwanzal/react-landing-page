@@ -1,6 +1,6 @@
 # React landing page
 
-This library use react + vite together to gain best experiences
+This library used react + vite together to gain best experiences
 
 link : <http://ridwanzal.github.io>
 
