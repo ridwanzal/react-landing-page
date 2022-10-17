@@ -47,7 +47,7 @@ function Blog() {
                           {data &&
                           data.map(({ id, title, content, createdAt }) => (
                               <li key={id} data-mh className='item'>
-                                  <div className='card padding-big'>
+                                  <div className='card card-shadow padding-big'>
                                       <Link className='title block' to={"/blog/" + id}>{title}</Link>
                                       <div className='content'>{content.substr(0, 200)}</div>
                                       <div className='date'>{createdAt}</div>

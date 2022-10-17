@@ -2,7 +2,12 @@
     background-color: #fff;
     border: 1px solid #ddd;
     padding: 16px;
-    border-radius: 4px;
+
+    &.card-shadow {
+        box-shadow: 8px 27px 0px -8px rgba(237,240,243,0.32);
+        -webkit-box-shadow: 8px 27px 0px -8px rgba(237,240,243,0.32);
+        -moz-box-shadow: 8px 27px 0px -8px rgba(237,240,243,0.32);
+    }
 
     &.padding-big {
         padding: 24px;
