@@ -1,6 +1,7 @@
 import './styles/styles.scss';
 import Home from './page/Home';
 import News from './page/News';
+import Blog from './page/Blog';
 import Nav from './components/Nav';
 import Designs from './page/Designs';
 import Projects from './page/Projects';
@@ -33,6 +34,8 @@ function App() {
             <Route path="/login" element={<Login />}>
             </Route>
             <Route path="/about" element={<About />}>
+            </Route>
+            <Route path="/blog" element={<Blog />}>
             </Route>
             <Route path="*" element={<NotFound />}>
             </Route>

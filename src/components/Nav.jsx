@@ -39,6 +39,11 @@ function Nav() {
         "name": "Articles",
         "link": "/articles",
         "addClass": "item"
+    },
+    {
+        "name": "Blog",
+        "link": "/blog",
+        "addClass": "item"
     }
   ];
 
