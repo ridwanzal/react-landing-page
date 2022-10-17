@@ -26,7 +26,7 @@ function Nav() {
         "addClass": "item"
     },
     {
-        "name": "Designs",
+        "name": "Designs",  
         "link": "/designs",
         "addClass": "item"
     },
