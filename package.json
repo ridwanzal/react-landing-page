@@ -12,11 +12,13 @@
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "countapi-js": "^1.0.2",
     "http-server": "^14.1.1",
+    "matchheight": "^0.1.2",
     "path": "^0.12.7",
     "react": "^18.2.0",
     "react-activity-calendar": "^1.6.4",
     "react-dom": "^18.2.0",
     "react-github-calendar": "^3.3.4",
+    "react-height-matching-group": "^1.0.8",
     "react-router-dom": "^6.4.0",
     "react-shimmer": "^3.2.0"
   },

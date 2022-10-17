@@ -1,7 +1,6 @@
 import './styles/styles.scss';
 import Home from './page/Home';
 import News from './page/News';
-import Blog from './page/Blog';
 import Nav from './components/Nav';
 import Designs from './page/Designs';
 import Projects from './page/Projects';
@@ -9,6 +8,8 @@ import Contact from './page/Contact';
 import Login from './page/backview/Login';
 import NotFound from './page/NotFound';
 import About from './page/About';
+import Blog from './page/Blog';
+import BlogDetail from './page/BlogDetail';
 
 import {
   BrowserRouter,
@@ -36,6 +37,8 @@ function App() {
             <Route path="/about" element={<About />}>
             </Route>
             <Route path="/blog" element={<Blog />}>
+            </Route>
+            <Route path="/blog/:id" element={<BlogDetail />}>
             </Route>
             <Route path="*" element={<NotFound />}>
             </Route>

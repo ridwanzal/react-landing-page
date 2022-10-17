@@ -28,6 +28,10 @@
         @media #{$media-not-desktop}{  
             padding: 0 16px;
         }
+
+        .content-small {
+            max-width: 600px;
+        }
     }
 }
 
@@ -245,6 +249,10 @@
 
             @media #{$media-not-desktop}{  
                 display: flow-root;
+            }
+
+            li {
+                display: contents;
             }
         }
     }

@@ -4,6 +4,10 @@
     padding: 16px;
     border-radius: 4px;
 
+    &.padding-big {
+        padding: 24px;
+    }
+
     img, i {
         margin-right: 16px;
     }
@@ -33,7 +37,8 @@
 
         &.block {
             display: block;
-            font-weight: 600;
+            color: #000;
+            font-weight: 400;
         }
     }
 

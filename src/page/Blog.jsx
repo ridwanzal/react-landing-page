@@ -1,21 +1,14 @@
 import '../styles/styles.scss';
-import Nav from '../components/Nav';
 import Footer from '../components/Footer';
-import SectionProfile from '../components/SectionProfile';
 import { useState, useEffect } from "react";
 import {useLocation} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 function Blog() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const location = useLocation()
   
-  function cutText(text){
-    const result = text.substr(content, 0, 200);
-    return result;
-  }
-
   useEffect(() => {
     fetch(`http://localhost:3000/blog`)
       .then((response) => {
@@ -49,20 +42,20 @@ function Blog() {
                   {error && (
                     <div>{`There is a problem fetching the post data - ${error}`}</div>
                   )}
-                  <div className='section-service'>
-                    <ul className='section-service--list'>
-                        {data &&
-                        data.map(({ id, title, content, createdAt }) => (
-                            <li className='item'>
-                                <div className='card'>
-                                    <a className='title block' href="location.pathname" target="_blank">{title}</a>
-                                    <div className='content'>{content.substr(0, 200)}</div>
-                                    <div className='date'>{createdAt}</div>
-                                </div>
-                            </li>
-                        ))}
-                    </ul>
-                  </div>
+                    <div className='section-service'>
+                      <ul className='section-service--list'>
+                          {data &&
+                          data.map(({ id, title, content, createdAt }) => (
+                              <li key={id} data-mh className='item'>
+                                  <div className='card padding-big'>
+                                      <Link className='title block' to={"/blog/" + id}>{title}</Link>
+                                      <div className='content'>{content.substr(0, 200)}</div>
+                                      <div className='date'>{createdAt}</div>
+                                  </div>
+                              </li>
+                          ))}
+                      </ul>
+                    </div>
               </div>
             </div>
         </div>
@@ -72,4 +65,4 @@ function Blog() {
   )
 }
 
-export default Blog
+export default Blog;
