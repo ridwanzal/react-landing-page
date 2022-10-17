@@ -2,6 +2,7 @@
     background-color: #fff;
     border: 1px solid #ddd;
     padding: 16px;
+    border-radius: 4px;
 
     img, i {
         margin-right: 16px;
@@ -15,5 +16,30 @@
                 border-bottom: 1px solid #ddd;
             }
         }
+    }
+
+    .title {
+        margin-bottom: 8px;
+        font-size: 24px;
+        line-height: 1.4;
+        text-decoration: none;
+        color: black;
+
+        &:hover,
+        &:focus,
+        &:active {
+           color: #006939;
+        }
+
+        &.block {
+            display: block;
+            font-weight: 600;
+        }
+    }
+
+    .date {
+        margin-top: 16px;
+        font-size: 14px;
+        color: #888;
     }
 }
