@@ -34,4 +34,35 @@ $media-below-640: '(max-width: #{$break-point-640})';
 $media-below-1200: '(max-width: #{$break-point-1200})';
 $media-below-768: '(max-width: #{$break-point-768 - 1})';
 
+// common styles
+.mt-1 {
+    margin-top: 8px;
+}
 
+.mt-2 {
+    margin-top: 16px;
+}
+
+.mt-3 {
+    margin-top: 24px;
+}
+
+.pt-1 {
+    padding-top: 8px;
+}
+
+.pt-2 {
+    padding-top: 16px;
+}
+
+.pt-3 {
+    padding-bottom: 24px;
+}
+
+.display-block {
+    display: block !important;
+}
+
+.display-flex {
+    display: flex !important;
+}

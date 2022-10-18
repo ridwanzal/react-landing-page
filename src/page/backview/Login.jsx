@@ -64,7 +64,6 @@ function Designs() {
                             <input className='form-in' name="password" placeholder='Password' required/>
                             {renderErrMsg("password")}
                         </div>
-                        <br/>
                         <input type="submit" className='btn default outline light' value="Submit"/>
                     </form>
                 </div>
