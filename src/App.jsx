@@ -10,6 +10,7 @@ import NotFound from './page/NotFound';
 import About from './page/About';
 import Blog from './page/Blog';
 import BlogDetail from './page/BlogDetail';
+import BlogSubmit from './page/backview/BlogSubmit';
 
 import {
   BrowserRouter,
@@ -41,6 +42,8 @@ function App() {
             <Route path="/blog/:id" element={<BlogDetail />}>
             </Route>
             <Route path="*" element={<NotFound />}>
+            </Route>
+            <Route path="/blog/add" element={<BlogSubmit />}>
             </Route>
             <Route path="/" element={<Home />}>
             </Route>

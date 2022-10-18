@@ -1,5 +1,6 @@
 import { useEffect, useState} from 'react';
 import {useLocation} from 'react-router-dom';
+import logoMain from '../assets/logo.png';
 
 function BlogDetail() {
     const location = useLocation()
@@ -32,6 +33,11 @@ function BlogDetail() {
                         <div className='content-small'>
                             <h1>{title}</h1>
                             <div>Dibuat pada {createdAt}</div>
+                            <div>
+                            <div className='mt-2'>
+                                <img className='main-logo' src={logoMain} alt="" width="20"/>&nbsp; M. Ridwan Zalbina
+                            </div>
+                            </div>
                             <br/>
                             <p>{content}</p>
                         </div>
