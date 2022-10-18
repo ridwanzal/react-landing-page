@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@uiw/react-md-editor": "^3.19.0",
     "countapi-js": "^1.0.2",
     "http-server": "^14.1.1",
     "matchheight": "^0.1.2",
