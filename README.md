@@ -27,6 +27,14 @@ npm run dev
 npm run build
 ```
 
+### Environment Configuration
+
+Make sure you've already installed dotenv library and add the following :
+
+```
+API_URL=https://spotty-lights-divide-103-56-148-148.loca.lt/
+```
+
 ## License
 
 MIT License
