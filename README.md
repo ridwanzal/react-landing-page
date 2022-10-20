@@ -29,11 +29,17 @@ npm run build
 
 ### .env
 
-on .env files add the following, 
-for vite project we need to add VITE_ as prefix:
+add the following with VITE_ as prefix :
 
 ```
 VITE_API_URL=https://five-frogs-argue-103-56-148-148.loca.lt/blog
+VITE_API_KEY=APJX-EJSDKS-ASDSA
+```
+
+access the .env on project :
+
+```
+import.meta.env.VITE_API_URL
 ```
 
 ## License
