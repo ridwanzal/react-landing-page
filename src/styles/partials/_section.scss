@@ -248,7 +248,8 @@
             grid-gap: 16px;
 
             @media #{$media-not-desktop}{  
-                display: flow-root;
+                display: grid;
+                grid: none;
             }
 
             li {

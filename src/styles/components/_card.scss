@@ -2,6 +2,13 @@
     background-color: #fff;
     border: 1px solid #ddd;
     padding: 16px;
+    transition: ease-in .1s;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: #f8f8f8;
+    }
 
     &.card-shadow {
         box-shadow: 8px 27px 0px -8px rgba(237,240,243,0.32);
@@ -30,7 +37,7 @@
 
     .title {
         margin-bottom: 8px;
-        font-size: 24px;
+        font-size: 20px;
         line-height: 1.4;
         text-decoration: none;
         color: black;
