@@ -3,6 +3,8 @@ import {useLocation} from 'react-router-dom';
 import logoMain from '../assets/logo.png';
 
 function BlogDetail() {
+    const API_URL = "http://103.56.148.148:3000/";
+
     const location = useLocation()
     const pathname = location.pathname;
     console.log(pathname);
@@ -11,7 +13,7 @@ function BlogDetail() {
     const [data, setData] = useState(null);
 
     useEffect(() => {
-        fetch(`http://localhost:3000/blog/`+ blogId)
+        fetch(API_URL + `blog/` + blogId)
         .then((response)=> {
             if(!response.ok){
                 console.log(response.status)

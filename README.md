@@ -27,12 +27,13 @@ npm run dev
 npm run build
 ```
 
-### Environment Configuration
+### .env
 
-Make sure you've already installed dotenv library and add the following :
+on .env files add the following, 
+for vite project we need to add VITE_ as prefix:
 
 ```
-API_URL=https://five-frogs-argue-103-56-148-148.loca.lt/blog
+VITE_API_URL=https://five-frogs-argue-103-56-148-148.loca.lt/blog
 ```
 
 ## License

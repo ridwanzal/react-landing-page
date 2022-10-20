@@ -35,7 +35,7 @@ function Designs() {
         let {credential, password} = document.forms[0];
         let authenticated = authData.find(user => user.credential === credential.value);
         console.log(authenticated)
-        
+            
         if(authenticated){
             if(authenticated.password.toString() === password.value.toString()) {
                 setSubmitted(true);
