@@ -4,13 +4,16 @@ import { useState, useEffect } from "react";
 import {useLocation} from 'react-router-dom';
 import { Link } from "react-router-dom";
 
+
 function Blog() {
+  const API_URL = "http://103.56.148.148:3000/";
+
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   
   useEffect(() => {
-    fetch(`http://localhost:3000/blog`)
+    fetch(API_URL + `blog`)
       .then((response) => {
         if (!response.ok) {
           throw new Error(
