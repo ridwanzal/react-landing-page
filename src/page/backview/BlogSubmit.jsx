@@ -4,13 +4,11 @@ import { useState } from 'react';
 import MDEditor from '@uiw/react-md-editor';
 
 function BlogSubmit() { 
+    const API_URL = import.meta.env.VITE_API_URL;
+
     const [title, setTitle] = useState("");
     const [errMsg, setErr] = useState({});
     const [content, setContent] = useState("");
-
-    console.log('gagall')
-    console.log(import.meta.env);
-    console.log(import.meta.env.VITE_API_URL);
 
     function handleSubmit(event){
         event.preventDefault();
@@ -25,7 +23,7 @@ function BlogSubmit() {
             setErr({"name": "content"})
         }
 
-        const res = fetch('http://103.56.148.148:3000/blog/add', {
+        const res = fetch(API_URL + '/blog/add', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: {

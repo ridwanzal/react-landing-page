@@ -38,17 +38,19 @@ function News() {
         <div className="wrapper">
             <div className="wrapper-inner">
               <div className="wrapper-content">
-                <div className='section-news'>
+                <div className='section-service'>
                   <h3>Dev to feed</h3>
                   {loading && <div>A moment please...</div>}
                   {error && (
                     <div>{`There is a problem fetching the post data - ${error}`}</div>
                   )}
-                  <ul>
+                  <ul className='section-service--list'>
                     {data &&
                       data.map(({ id, title, url }) => (
-                        <li key={id}>
-                          <a href={url} target="_blank">{title}</a>
+                        <li key={id} className='item'>
+                          <span className='card card-shadow padding-big'>
+                            <a className='title block' href={url} target="_blank">{title}</a>
+                          </span>
                         </li>
                       ))}
                   </ul>

@@ -6,14 +6,14 @@ import { Link } from "react-router-dom";
 
 
 function Blog() {
-  const API_URL = "http://103.56.148.148:3000/";
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   
   useEffect(() => {
-    fetch(API_URL + `blog`)
+    fetch(API_URL + `/blog`)
       .then((response) => {
         if (!response.ok) {
           throw new Error(
@@ -50,11 +50,11 @@ function Blog() {
                           {data &&
                           data.map(({ id, title, content, createdAt }) => (
                               <li key={id} data-mh className='item'>
-                                  <div className='card card-shadow padding-big'>
+                                  <span className='card card-shadow padding-big'>
                                       <Link className='title block' to={"/blog/" + id}>{title}</Link>
                                       <div className='content'>{content.substr(0, 200)}</div>
                                       <div className='date'>{createdAt}</div>
-                                  </div>
+                                  </span>
                               </li>
                           ))}
                       </ul>
