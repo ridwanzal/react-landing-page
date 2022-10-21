@@ -6,14 +6,14 @@ import { Link } from "react-router-dom";
 
 
 function Blog() {
-  const API_URL = import.meta.env.VITE_API_URL;
+  const API_URL = 'https://rwzapi.mrpbylt.com/';
 
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   
   useEffect(() => {
-    fetch(API_URL + `/blog`)
+    fetch('https://rwzapi.mrpbylt.com/blog')
       .then((response) => {
         if (!response.ok) {
           throw new Error(
