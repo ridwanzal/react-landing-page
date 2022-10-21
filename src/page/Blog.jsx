@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 
 function Blog() {
-  const API_URL = import.meta.env.VITE_API_URL;
+  const API_URL = import.meta.env.VITE_API_URL || 'http://103.56.148.148:3000/';
 
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
