@@ -2,9 +2,10 @@ import '../styles/styles.scss';
 import Footer from '../components/Footer';
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Skeleton from 'react-loading-skeleton'
-import 'react-loading-skeleton/dist/skeleton.css'
-
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm'
 
 function Blog() {
   const [data, setData] = useState(null);
@@ -54,7 +55,6 @@ function Blog() {
                               <li key={id} data-mh className='item'>
                                   <span className='card card-shadow padding-big'>
                                       <Link className='title block' to={"/blog/" + id}>{title}</Link>
-                                      <div className='content'>{content.substr(0, 200)}</div>
                                       <div className='date'>{createdAt}</div>
                                   </span>
                               </li>

@@ -1,6 +1,9 @@
 import { useEffect, useState} from 'react';
 import {useLocation} from 'react-router-dom';
 import logoMain from '../assets/logo.png';
+import parse from 'html-react-parser';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm'
 
 function BlogDetail() {
     const location = useLocation()
@@ -22,36 +25,42 @@ function BlogDetail() {
         }).
         then((realData)=> {
             setData(realData);
+            console.log(realData)
+            let result = realData[0].tags.split(',').map(function(value){
+                console.log(value)
+            })
         })
     }, []);
 
     return ( 
-        <>
-        <div className="section-general">
-            <div className="wrapper">
-                <div className="wrapper-inner">
-                    <div className="wrapper-content">
-                    {data &&data.map(({ id, title, content, createdAt }) => (   
-                        <div className='content-small'>
-                            <h1>{title}</h1>
-                            <div>Dibuat pada {createdAt}</div>
-                            <div>
-                            <div className='mt-2'>
-                                <img className='main-logo' 
-                                src={logoMain} 
-                                alt="" 
-                                width="20"/>&nbsp; M. Ridwan Zalbina
+        <div>
+            <div className="section-general">
+                <div className="wrapper">
+                    <div className="wrapper-inner">
+                        <div className="wrapper-content">
+                        {data &&data.map(({ id, title, content, createdAt, tags }) => (   
+                            <div className='content-small' keys={id}>
+                                <br/>
+                                <br/>
+                                <div className='blog-tags'>
+                                    {tags.split(',').map(function(value){
+                                        return <div>{value}</div>
+                                    })}
+                                </div>
+                                <div className='mt-2'>
+                                    <img className='main-logo' 
+                                    src={logoMain} 
+                                    alt="" 
+                                    width="20"/>&nbsp; M. Ridwan Zalbina | {createdAt}
+                                </div>
+                                <ReactMarkdown children={content} remarkPlugins={[remarkGfm]} />
                             </div>
-                            </div>
-                            <br/>
-                            <p>{content}</p>
+                        ))}
                         </div>
-                    ))}
                     </div>
                 </div>
             </div>
         </div>
-        </>
     )
 }
 
