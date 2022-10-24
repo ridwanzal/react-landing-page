@@ -3,7 +3,8 @@ import {useLocation} from 'react-router-dom';
 import logoMain from '../assets/logo.png';
 import parse from 'html-react-parser';
 import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm'
+import remarkGfm from 'remark-gfm';
+import Footer from '../components/Footer';
 
 function BlogDetail() {
     const location = useLocation()
@@ -39,8 +40,7 @@ function BlogDetail() {
                     <div className="wrapper-inner">
                         <div className="wrapper-content">
                         {data &&data.map(({ id, title, content, createdAt, tags }) => (   
-                            <div className='content-small' keys={id}>
-                                <br/>
+                            <div className='content-small contain-wrap' keys={id}>
                                 <br/>
                                 <div className='blog-tags'>
                                     {tags.split(',').map(function(value){
@@ -60,6 +60,7 @@ function BlogDetail() {
                     </div>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     )
 }
