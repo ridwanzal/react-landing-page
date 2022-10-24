@@ -75,7 +75,7 @@ function BlogSubmit() {
 
                             <div className='form-g'>    
                                 <label className='display-block'>Tags:</label>
-                                <textarea rows="5" className='form-in'></textarea>
+                                <textarea rows="5" className='form-in'  name="" value={tags} onChange={(e) => setTags(e.target.value)}></textarea>
                             </div>
 
                             <div className='form-g'>

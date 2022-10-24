@@ -33,11 +33,10 @@
         .content-small {
             max-width: 600px;
            
-           
-           p {
-            line-height: 1.7
-           } 
         }
+        p,ul,li {
+         line-height: 1.7
+        } 
         
     }
 
@@ -347,7 +346,7 @@
                 }
 
                 small {
-                    color: #555;
+                    color: #8f8f8f;
                 }
             }
         }
