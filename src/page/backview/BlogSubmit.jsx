@@ -113,7 +113,7 @@ function BlogSubmit() {
                 </div>
             </div>
         </div>
-        <Footer></Footer>
+        <Footer></Footer>   
         </>
     );
 }

@@ -13,6 +13,7 @@
         display: block;
         color: #808080;
         font-size: 14px;
+        
         @media #{$media-not-desktop}{ 
             text-align: center;
             display: inline-block;
