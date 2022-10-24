@@ -1,7 +1,6 @@
 import { useEffect, useState} from 'react';
 import {useLocation} from 'react-router-dom';
 import logoMain from '../assets/logo.png';
-import parse from 'html-react-parser';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import Footer from '../components/Footer';
