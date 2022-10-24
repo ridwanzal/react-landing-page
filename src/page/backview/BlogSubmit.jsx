@@ -3,6 +3,7 @@ import Footer from '../../components/Footer';
 import { useState } from 'react';
 import MDEditor from '@uiw/react-md-editor';
 import rehypeSanitize from "rehype-sanitize";
+import {Routes, Route, useNavigate} from 'react-router-dom';
 
 function BlogSubmit() { 
     const envDevState = import.meta.env.DEV;
@@ -12,13 +13,14 @@ function BlogSubmit() {
     const [content, setContent] = useState("");
     const [tags, setTags] = useState("");
     const [errMsg, setErr] = useState({});
+    const navigate = useNavigate();
 
     function handleSubmit(event){
         event.preventDefault();
         let titleData = title;
         let contentData = content;
         let tagsData = tags;
-        
+
         if(titleData.toString().trim() === ''){
             setErr({"name": "title"})
         }
@@ -27,19 +29,28 @@ function BlogSubmit() {
             setErr({"name": "content"})
         }
 
-        const res = fetch(API_URL + '/blog', {
+        if(tagsData.toString().trim() === ''){
+            setErr({"name": "tags"})
+        }
+
+        fetch(API_URL + '/blog', {
             method: 'POST',
             headers:{
                 'Content-Type': 'application/x-www-form-urlencoded'
             },    
             body: new URLSearchParams({
                 'title': titleData,
-                'content': contentData
+                'content': contentData,
+                'tags': tagsData
             })
         })
         .then((response) => response.json())
         .then((responseJson) => {
             console.log(responseJson)
+            console.log(responseJson.affectedRows)
+            if(responseJson.affectedRows === 1){
+                navigate('/blog/');
+            }
         })
         .catch((error) => {
             console.error(error);
@@ -69,13 +80,13 @@ function BlogSubmit() {
                                     type="text" 
                                     name="" value={title} 
                                     placeholder="Buat judul artikel" 
-                                    onChange={(e) => setTitle(e.target.value)}/>
+                                    onChange={(e) => setTitle(e.target.value)} required/>
                                 {renderError("title")}
                             </div>
 
                             <div className='form-g'>    
                                 <label className='display-block'>Tags:</label>
-                                <textarea rows="5" className='form-in'  name="" value={tags} onChange={(e) => setTags(e.target.value)}></textarea>
+                                <textarea rows="5" className='form-in'  name="" onChange={(e) => setTags(e.target.value)} required>{tags}</textarea>
                             </div>
 
                             <div className='form-g'>
@@ -86,6 +97,8 @@ function BlogSubmit() {
                                     previewOptions={{
                                         rehypePlugins: [[rehypeSanitize]],
                                     }}
+
+                                    required
                                 />
                                 <div className='form-md'>
                                     <MDEditor.Markdown source={content} style={{ whiteSpace: 'pre-wrap' }} />

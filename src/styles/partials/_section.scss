@@ -12,8 +12,8 @@
         }
 
         &.topbottom {
-            padding-top: 32px;
-            padding-bottom: 48px;
+            padding-top: 48px;
+            padding-bottom: 64px;
 
             @media #{$media-not-desktop}{ 
                 padding-top: 32px;
@@ -208,7 +208,7 @@
         &.gray {
             background-color: #f9f9f9;
             padding-top: 24px;
-            padding-bottom: 24px;
+            padding-bottom: 48px;
         }
     }
 
@@ -380,4 +380,19 @@
 
 .center {
     text-align: center !important;
+}
+
+
+.blog {
+    &-tags {
+        display: flex;
+        margin-bottom: 24px;
+
+        div {
+            background-color: #eee;
+            margin-right: 8px;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+    }
 }
