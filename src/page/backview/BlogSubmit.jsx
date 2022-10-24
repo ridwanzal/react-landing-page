@@ -2,6 +2,7 @@ import '../../styles/styles.scss';
 import Footer from '../../components/Footer';
 import { useState } from 'react';
 import MDEditor from '@uiw/react-md-editor';
+import rehypeSanitize from "rehype-sanitize";
 
 function BlogSubmit() { 
     const envDevState = import.meta.env.DEV;
@@ -72,20 +73,26 @@ function BlogSubmit() {
                                 {renderError("title")}
                             </div>
 
+                            <div className='form-g'>    
+                                <label className='display-block'>Tags:</label>
+                                <textarea rows="5" className='form-in'></textarea>
+                            </div>
+
                             <div className='form-g'>
                                 <label className='display-block'>Content:</label>
                                 <MDEditor
                                     value={content}
                                     onChange={setContent}
+                                    previewOptions={{
+                                        rehypePlugins: [[rehypeSanitize]],
+                                    }}
                                 />
-                                <MDEditor.Markdown source={content} style={{ whiteSpace: 'pre-wrap' }} />
+                                <div className='form-md'>
+                                    <MDEditor.Markdown source={content} style={{ whiteSpace: 'pre-wrap' }} />
+                                </div>
                                 {renderError("content")}
                             </div>
 
-                            <div className='form-g'>    
-                                <label className='display-block'>Tags:</label>
-                                <textarea rows="5" className='form-in'></textarea>
-                            </div>
 
                             <input type="submit" className='btn default outline light' value="Submit"/>
                         </form>

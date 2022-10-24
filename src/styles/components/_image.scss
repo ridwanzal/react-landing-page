@@ -9,7 +9,7 @@
     position: absolute;
     width: 370px;
     right: 0;
-    bottom: 75px;
+    bottom: -5px;
 
     @media #{$media-not-desktop}{  
         display: none;

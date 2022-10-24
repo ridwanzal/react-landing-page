@@ -32,7 +32,13 @@
 
         .content-small {
             max-width: 600px;
+           
+           
+           p {
+            line-height: 1.7
+           } 
         }
+        
     }
 
     &-blog{
@@ -117,6 +123,16 @@
                     &--item {
                         a {
                             text-decoration: none;
+                            
+                            @media #{$media-not-desktop}{   
+                                display: block;    
+                                margin-bottom: 8px;
+                                
+                                &:not(:first-of-type){ 
+                                    margin-left: 0 !important;
+                                }
+                            }
+
                             &:not(:first-of-type){
                                 margin-left: 8px;
                             }
@@ -192,6 +208,8 @@
 
         &.gray {
             background-color: #f9f9f9;
+            padding-top: 24px;
+            padding-bottom: 24px;
         }
     }
 
