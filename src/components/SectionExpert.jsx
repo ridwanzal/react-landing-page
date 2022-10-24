@@ -2,6 +2,7 @@ import helping from '../assets/helping.svg';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import Footer from '../components/Footer';
 
 function SectionExpert() {
     return (
