@@ -8,6 +8,7 @@
 
         @media #{$media-not-desktop}{ 
             padding: 0 16px;
+            margin-top: 52px;
         }
 
         &.topbottom {
@@ -31,6 +32,17 @@
 
         .content-small {
             max-width: 600px;
+        }
+    }
+
+    &-blog{
+        
+        &-add {
+            margin-top: 54px; 
+
+            @media #{$media-not-desktop}{ 
+                margin-top: 72px;
+            }
         }
     }
 }
@@ -137,8 +149,7 @@
     }
 
     &.dark-mode {
-        h1,
-        h2, h3, h4, h5, h6,
+        h1, h2, h3, h4, h5, h6,
         ul,p,label, div{
             color: #fcfcfc;
         }
@@ -168,7 +179,6 @@
                 }
             }
         }
-
     }
 
     &-general {

@@ -54,7 +54,7 @@ function Nav() {
           <ul className='nav-list'>
               <li className="item logoname">
                   <Link to="/">
-                    <img className='main-logo' src={logoMain} alt="" width="20"/>&nbsp;RIDWANZAL</Link>
+                  <img className='main-logo' src={logoMain} alt="" width="20"/>&nbsp;RIDWANZAL</Link>
               </li>
               {menu &&
                 menu.map(({ name, link, addClass }) => (
@@ -81,18 +81,12 @@ function Nav() {
           </button>
         </div>
         <ul className={`nav-list-mobile ${showMenu ? "show" : "hide"}`}>
-          <li className="item">
-            <Link to="/about">About</Link>
-          </li>
-          <li className='item'>
-            <Link to="/designs">Design</Link>
-          </li>
-          <li className='item'>
-            <Link to="/projects">Projects</Link>
-          </li>
-          <li className='item'>
-            <Link to="/news">Articles</Link>
-          </li>
+          {menu &&
+            menu.map(({ name, link, addClass }) => (
+              <li key={name} className={addClass}>
+                <Link to={link}>{name}</Link>
+              </li>
+          ))}
         </ul>
       </div>
     </div>
