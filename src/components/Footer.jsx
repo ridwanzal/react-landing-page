@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { printYear } from '../utils/commonUtils';
+import viteLogo from '../../public/vite.svg';
 
 function Footer() {
     const [data, setData] = useState(null);
@@ -12,7 +13,7 @@ function Footer() {
                         @{printYear()} M. Ridwan Zalbina. All rights reserved
                     </div>
                     <div className="right">
-                        <img height="16" src="./vite.svg" />&nbsp;&nbsp; Build with React + Vite
+                        <img height="16" src={viteLogo} />&nbsp;&nbsp; Build with React + Vite
                     </div>
                 </div>
             </div>
