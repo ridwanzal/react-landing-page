@@ -26,7 +26,6 @@
     }
 
     @media #{$media-not-desktop} {  
-        border-bottom: 0;
 
         &.last {
             &:last-child {
