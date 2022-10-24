@@ -2,37 +2,44 @@ import '../../styles/styles.scss';
 import Footer from '../../components/Footer';
 import { useState } from 'react';
 import MDEditor from '@uiw/react-md-editor';
+import rehypeSanitize from "rehype-sanitize";
 
 function BlogSubmit() { 
-    const API_URL = import.meta.env.VITE_API_URL;
+    const envDevState = import.meta.env.DEV;
+    const API_URL = envDevState ? "http://localhost:6200" : "https://rwzapi.mrpbylt.com/";
 
     const [title, setTitle] = useState("");
-    const [errMsg, setErr] = useState({});
     const [content, setContent] = useState("");
+    const [tags, setTags] = useState("");
+    const [errMsg, setErr] = useState({});
 
     function handleSubmit(event){
         event.preventDefault();
         let titleData = title;
         let contentData = content;
+        let tagsData = tags;
         
-        if(titleData.toString() === ''){
+        if(titleData.toString().trim() === ''){
             setErr({"name": "title"})
         }
         
-        if(contentData.toString() === ''){
+        if(contentData.toString().trim() === ''){
             setErr({"name": "content"})
         }
 
-        const res = fetch(API_URL + '/blog/add', {
+        const res = fetch(API_URL + '/blog', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: {
-                id: 0,
-            },
+            headers:{
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },    
+            body: new URLSearchParams({
+                'title': titleData,
+                'content': contentData
+            })
         })
         .then((response) => response.json())
         .then((responseJson) => {
-            return responseJson.movies;
+            console.log(responseJson)
         })
         .catch((error) => {
             console.error(error);
@@ -54,25 +61,42 @@ function BlogSubmit() {
         <div className="section-general">
             <div className="wrapper">
                 <div className="wrapper-inner">
-                    <form onSubmit={handleSubmit} className="wrapper-content">
-                    <div className='form-g'>
-                        <label className='display-block'>Title:</label>
-                        <input className='form-in' type="text" name="" value={title} placeholder="Buat judul artikel" onChange={(e) => setTitle(e.target.value)}/>
-                        {renderError("title")}
-                    </div>
+                    <div className="wrapper-blog-add">
+                        <form onSubmit={handleSubmit} className="wrapper-content">
+                            <div className='form-g'>
+                                <label className='display-block'>Title:</label>
+                                <input className='form-in'
+                                    type="text" 
+                                    name="" value={title} 
+                                    placeholder="Buat judul artikel" 
+                                    onChange={(e) => setTitle(e.target.value)}/>
+                                {renderError("title")}
+                            </div>
 
-                    <div className='form-g'>
-                        <label className='display-block'>Content:</label>
-                        <MDEditor
-                            value={content}
-                            onChange={setContent}
-                        />
-                        <MDEditor.Markdown source={content} style={{ whiteSpace: 'pre-wrap' }} />
-                        {renderError("content")}
-                    </div>
+                            <div className='form-g'>    
+                                <label className='display-block'>Tags:</label>
+                                <textarea rows="5" className='form-in'></textarea>
+                            </div>
 
-                    <input type="submit" className='btn default outline light' value="Submit"/>
-                    </form>
+                            <div className='form-g'>
+                                <label className='display-block'>Content:</label>
+                                <MDEditor
+                                    value={content}
+                                    onChange={setContent}
+                                    previewOptions={{
+                                        rehypePlugins: [[rehypeSanitize]],
+                                    }}
+                                />
+                                <div className='form-md'>
+                                    <MDEditor.Markdown source={content} style={{ whiteSpace: 'pre-wrap' }} />
+                                </div>
+                                {renderError("content")}
+                            </div>
+
+
+                            <input type="submit" className='btn default outline light' value="Submit"/>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

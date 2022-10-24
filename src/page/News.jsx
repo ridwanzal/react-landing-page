@@ -3,6 +3,8 @@ import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import SectionProfile from '../components/SectionProfile';
 import { useState, useEffect } from "react";
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 
 function News() {
@@ -40,7 +42,7 @@ function News() {
               <div className="wrapper-content">
                 <div className='section-service'>
                   <h3>Dev to feed</h3>
-                  {loading && <div>A moment please...</div>}
+                  {loading && <div><Skeleton count={3} height={30} duration={10} /></div>}
                   {error && (
                     <div>{`There is a problem fetching the post data - ${error}`}</div>
                   )}

@@ -1,4 +1,7 @@
 import helping from '../assets/helping.svg';
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+
 
 function SectionExpert() {
     return (
@@ -53,7 +56,7 @@ function SectionExpert() {
                                 </li>
                             </ul>
                             <div className='image-helping-wraps'>
-                                <img className='image-helping' src={helping}/>
+                                <img className='image-helping' src={helping || <Skeleton count={1} duration={2} /> }/>
                             </div>
                         </div>
                     </div>
