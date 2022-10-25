@@ -42,7 +42,7 @@ function News() {
               <div className="wrapper-content">
                 <div className='section-service'>
                   <h3>Dev to feed</h3>
-                  {loading && <div><Skeleton count={3} height={30} duration={10} /></div>}
+                  {loading && <div><Skeleton count={1} height={30} duration={10} /></div>}
                   {error && (
                     <div>{`There is a problem fetching the post data - ${error}`}</div>
                   )}

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { printYear } from '../utils/commonUtils';
-import viteLogo from '../../public/vite.svg';
+import viteLogo from '../assets/vite.svg';
 
 function Footer() {
     const [data, setData] = useState(null);

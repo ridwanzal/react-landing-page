@@ -27,7 +27,7 @@ function About() {
                 <div className="wrapper">
                     <div className="wrapper-inner">
                         <div className="wrapper-content wrapper-content--contain">
-                            <div className='content-small contain-wrap'>
+                            <div className='content-small contain-wrap half'>
                                 <h3>About me</h3>
                                 <p>
                                 Hello there, my name is M. Ridwan Zalbina, people call me "Edo" or "Ridwan", Software Engineer who works around fullstack development, but works as professional Front-End Developer. Really passionate to learn everything about technology: software engineering, visual design and information security.
