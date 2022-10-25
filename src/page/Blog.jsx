@@ -44,7 +44,7 @@ function Blog() {
             <div className="wrapper-inner">
               <div className="wrapper-content">
                   <h3>{ 'Blog' }</h3>
-                  {loading && <div>{ <Skeleton count={3} height={30} duration={10} />}</div>}
+                  {loading && <div>{ <Skeleton count={1} height={30} duration={10} />}</div>}
                   {error && (
                     <div>{`There is a problem fetching the post data - ${error}`}</div>
                   )}

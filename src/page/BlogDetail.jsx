@@ -37,22 +37,27 @@ function BlogDetail() {
             <div className="section-general">
                 <div className="wrapper">
                     <div className="wrapper-inner">
-                        <div className="wrapper-content wrapper-content--contain">
+                        <div className="wrapper-content wrapper-content--contain flex">
                         {data &&data.map(({ id, title, content, createdAt, tags }) => (   
-                            <div className='content-small contain-wrap' keys={id}>
-                                <br/>
-                                <div className='blog-tags'>
-                                    {tags.split(',').map(function(value){
-                                        return <div>{value}</div>
-                                    })}
+                            <div className='flex'>
+                                <div className='content-small contain-wrap' keys={id}>
+                                    <br/>
+                                    <div className='blog-tags'>
+                                        {tags.split(',').map(function(value){
+                                            return <div>{value}</div>
+                                        })}
+                                    </div>
+                                    <div className='mt-2'>
+                                        <img className='main-logo' 
+                                        src={logoMain} 
+                                        alt="" 
+                                        width="20"/>&nbsp; M. Ridwan Zalbina | {createdAt}
+                                    </div>
+                                    <ReactMarkdown children={content} remarkPlugins={[remarkGfm]} />
                                 </div>
-                                <div className='mt-2'>
-                                    <img className='main-logo' 
-                                    src={logoMain} 
-                                    alt="" 
-                                    width="20"/>&nbsp; M. Ridwan Zalbina | {createdAt}
+                                <div className='content-small contain-wrap contain-wrap--small'>
+                                    <h3>Recent Post</h3>
                                 </div>
-                                <ReactMarkdown children={content} remarkPlugins={[remarkGfm]} />
                             </div>
                         ))}
                         </div>
