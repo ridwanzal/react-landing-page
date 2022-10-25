@@ -58,4 +58,42 @@
     .section-news ul li {
         border-bottom: 1px solid #444;
     }
+
+    .section-expert--list li {
+        border-left: 1px solid #444;
+    }
+
+    .section-service--list li {
+        .card.card-shadow {
+            color: #fff;
+            -webkit-box-shadow : unset;
+            box-shadow: unset;
+        }
+
+        .card .title.block {
+            color: #fff;
+        }
+    }
+
+    .wrapper-content .content-small.contain-wrap {
+        background-color: #202022;
+        border: 1px solid #444;
+    }
+
+    .blog-tags div {
+        background: #444;
+        border: 1px solid #555;
+    }
+
+    pre {
+        background-color: #333;
+    }
+
+    .footer-container {
+        background: #202022;
+        .wrapper {
+            background: #202022;
+            border-top: 1px solid #202022;
+        }
+    }
 }

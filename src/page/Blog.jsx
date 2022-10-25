@@ -35,7 +35,7 @@ function Blog() {
       }).finally(() => {
         setLoading(false);
       });
-  }, []);
+  }, []); 
 
   return (
     <div>
