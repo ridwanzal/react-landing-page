@@ -24,14 +24,18 @@ function News() {
         return response.json();
       })
       .then((actualData) => {
-        setData(actualData);
+        setTimeout(function(){
+          setData(actualData);
+         }, 1000)
         setError(null);
       })
       .catch((err) => {
         setError(err.message);
         setData(null);
       }).finally(() => {
-        setLoading(false);
+        setTimeout(function(){
+          setLoading(false);
+        }, 1000)
       });
   }, []);
 
@@ -43,7 +47,7 @@ function News() {
               <div className="wrapper-content">
                 <div className='section-service'>
                   <h3>Dev to feed</h3>
-                  {loading && <div><Skeleton count={1} height={30} duration={10} /></div>}
+                  {loading && <div><Skeleton count={1} height={30} duration={100} /></div>}
                   {error && (
                     <div>{`There is a problem fetching the post data - ${error}`}</div>
                   )}
