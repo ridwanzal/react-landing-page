@@ -1,6 +1,6 @@
 function SectionExpert() {
     return (
-            <div className="section-general">
+            <div className="section-general between">
                 <div className="wrapper">
                     <div className="wrapper-inner">
                         <div className="wrapper-content">

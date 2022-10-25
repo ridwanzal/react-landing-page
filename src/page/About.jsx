@@ -87,6 +87,12 @@ function About() {
                                     Experience more than 10 years on logo, advertisment, promotional content.
                                     </li>
                                 </ul>
+                                <h3>Talks, Sharings and Achievements</h3>
+                                <ul>
+                                    <li>2021 - Visual and Product Design - Developer Student Club UNSRI (28 Maret 2021) <a href="https://docs.google.com/presentation/d/1K7dcO8o7QHCVSkKXvBtp-lgBVVKmJeEdJcPxE_qoOgM/edit#slide=id.g7099e915fd_0_413" target="_blank">link to doc</a> </li>
+                                    <li>2020 - Membangun dan bekerja di Startup - Sistem Komputer Festival </li>
+                                    <li>2020 - Sinta Contributor </li>
+                                </ul>
                                 <h3>Github Calendar</h3>
                                 <GitHubCalendar 
                                 username="ridwanzal" 
