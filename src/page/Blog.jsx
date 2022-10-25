@@ -26,14 +26,18 @@ function Blog() {
         return response.json();
       })
       .then((actualData) => {
-        setData(actualData);
+        setTimeout(function(){
+          setData(actualData);
+         }, 1000)
         setError(null);
       })
       .catch((err) => {
         setError(err.message);
         setData(null);
       }).finally(() => {
-        setLoading(false);
+        setTimeout(function(){
+          setLoading(false);
+         }, 1000)
       });
   }, []); 
 
