@@ -21,6 +21,9 @@
 
     &.padding-big {
         padding: 24px;
+        @media #{$media-not-desktop} {  
+            padding: 8px 16px;
+        }
     }
 
     img, i {
@@ -57,6 +60,10 @@
             display: block;
             color: #000;
             font-weight: 400;
+        }
+
+        @media #{$media-not-desktop} {  
+            font-size: 14px;
         }
     }
 

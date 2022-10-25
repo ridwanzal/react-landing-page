@@ -11,9 +11,10 @@ function News() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const API_URL = 'https://dev.to/api/articles/';
 
   useEffect(() => {
-    fetch(`https://dev.to/api/articles/`)
+    fetch(API_URL)
       .then((response) => {
         if (!response.ok) {
           throw new Error(

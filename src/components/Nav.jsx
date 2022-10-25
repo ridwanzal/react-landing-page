@@ -7,6 +7,7 @@ import React, { useState } from 'react';
 function Nav() {
   const [isClicked, setIsClicked] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
+  const [isLinkClicked, setLinkClicker] = useState(false);
 
   function toggleMode() {
     let element = document.body;
@@ -15,7 +16,11 @@ function Nav() {
   }
 
   const toggleMenuMobile = () => {
-    console.log(showMenu)
+    setShowMenu(!showMenu)
+  }
+
+  const passClick = () => {
+    console.log('clicked')
     setShowMenu(!showMenu)
   }
   
@@ -77,14 +82,14 @@ function Nav() {
         <div className='logo'>
           <Link to="/">RIDWANZAL</Link>
           <button className='menu bi-justify-right' onClick={toggleMenuMobile}>
-          {showMenu ? "" : ""}
+            {showMenu ? "" : ""}
           </button>
         </div>
         <ul className={`nav-list-mobile ${showMenu ? "show" : "hide"}`}>
           {menu &&
             menu.map(({ name, link, addClass }) => (
               <li key={name} className={addClass}>
-                <Link to={link}>{name}</Link>
+                <Link onClick={passClick} to={link}>{name}</Link>
               </li>
           ))}
         </ul>

@@ -20,6 +20,10 @@
                 padding-bottom: 16px;
             }
         }
+
+        &.flex {
+            display: flex;
+        }
     }
 
     &-content {
@@ -39,6 +43,10 @@
 
         .content-small {
             min-width: 250px;
+
+            @media #{$media-not-desktop}{   
+                min-width: unset;
+            }
             
             &.contain-wrap {
                 background-color: #fff;
@@ -52,14 +60,17 @@
                 }
 
                 &--small {
-                    min-height: 400px;
-                    max-height: 600px;
+                    height: fit-content;
                     overflow-y: auto;
                 }
             }
            
             &.half {
                 max-width: 600px;
+
+                @media #{$media-not-desktop}{    
+                    max-width: unset;
+                }
             }
         }
 
@@ -83,6 +94,11 @@
                 &:first-child {
                     min-width: 600px;
                     margin-right: 16px;
+
+                    @media #{$media-not-desktop}{
+                        min-width: unset;
+                        margin-bottom: 16px;
+                    }
                 }
             }
         }
@@ -267,9 +283,7 @@
         margin-bottom: 32px;
 
         @media #{$media-not-desktop}{   
-            &:first-child {
-                margin-top: 72px;
-            }
+          margin-top: 64px;
         }
         
         &.between {
@@ -278,8 +292,8 @@
 
         &.gray {
             background-color: #fff;
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
             padding-top: 24px;
             padding-bottom: 48px;
         }
@@ -340,7 +354,7 @@
     }
 
     &-service {
-        padding: 2px 0 2px 0;
+        padding: 2px 0;
 
         &--list {
             display: grid;
@@ -472,5 +486,9 @@
             border-radius: 30px;
             border: 1px solid #ddd;
         }
+    }
+
+    &-list {
+        padding-left: 14px;
     }
 }
