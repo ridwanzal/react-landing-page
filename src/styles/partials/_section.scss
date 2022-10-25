@@ -24,7 +24,7 @@
 
     &-content {
         h1,h2,h3,h4 {
-            padding-top: 32px;
+            padding-top: 24px;
         }
 
         &--contain {
@@ -270,6 +270,10 @@
             &:first-child {
                 margin-top: 72px;
             }
+        }
+        
+        &.between {
+            margin-bottom: 0;
         }
 
         &.gray {
