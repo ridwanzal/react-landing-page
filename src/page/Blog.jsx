@@ -2,7 +2,7 @@ import '../styles/styles.scss';
 import Footer from '../components/Footer';
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Skeleton from 'react-loading-skeleton';
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm'
@@ -43,12 +43,21 @@ function Blog() {
 
   return (
     <div>
-      <div className="section-general">
+      <div className="section-general opt-height">
         <div className="wrapper">
             <div className="wrapper-inner">
               <div className="wrapper-content">
                   <h3>{ 'Blog' }</h3>
-                  {loading && <div>{ <Skeleton count={1} height={30} duration={10} />}</div>}
+                  {loading && 
+                  <div>{ 
+                      <div className='flex-item'>
+                        <Skeleton count={1} height={10} duration={10} />
+                        <Skeleton count={1} height={10} duration={10} />
+                        <Skeleton count={1} height={10} duration={10} />
+                        <Skeleton count={1} height={10} duration={10} />
+                      </div>
+                    }
+                  </div>}
                   {error && (
                     <div>{`There is a problem fetching the post data - ${error}`}</div>
                   )}

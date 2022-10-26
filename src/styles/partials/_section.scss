@@ -50,7 +50,7 @@
             
             &.contain-wrap {
                 background-color: #fff;
-                padding: 24px 48px;
+                padding: 48px 48px;
                 border: 1px solid #ddd;
                 margin-top: 24px;
 
@@ -296,6 +296,10 @@
             border-bottom: 1px solid #ddd;
             padding-top: 24px;
             padding-bottom: 48px;
+        }
+
+        &.opt-height{
+            min-height: 1200px;
         }
     }
 
