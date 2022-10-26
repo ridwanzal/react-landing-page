@@ -5,6 +5,7 @@ import SectionProfile from '../components/SectionProfile';
 import { useState, useEffect } from "react";
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
+import NewsItem from '../components/Newsitem';
 
 
 function News() {
@@ -41,26 +42,26 @@ function News() {
 
   return (
     <div>
-      <div className="section-general">
+      <div className="section-general opt-height">
         <div className="wrapper">
             <div className="wrapper-inner">
               <div className="wrapper-content">
                 <div className='section-service'>
                   <h3>Dev to feed</h3>
-                  {loading && <div><Skeleton count={1} height={30} duration={100} /></div>}
+                  {loading && 
+                  <div>{ 
+                      <div className='flex-item'>
+                        <Skeleton count={1} height={10} duration={10} />
+                        <Skeleton count={1} height={10} duration={10} />
+                        <Skeleton count={1} height={10} duration={10} />
+                        <Skeleton count={1} height={10} duration={10} />
+                       </div>
+                    }
+                  </div>}
                   {error && (
                     <div>{`There is a problem fetching the post data - ${error}`}</div>
                   )}
-                  <ul className='section-service--list'>
-                    {data &&
-                      data.map(({ id, title, url }) => (
-                        <li key={id} className='item'>
-                          <span className='card card-shadow padding-big'>
-                            <a className='title block' href={url} target="_blank">{title}</a>
-                          </span>
-                        </li>
-                      ))}
-                  </ul>
+                  <NewsItem listData={data}></NewsItem>
                 </div>
               </div>
             </div>

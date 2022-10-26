@@ -16,12 +16,12 @@ function Nav() {
   }
 
   const toggleMenuMobile = () => {
-    setShowMenu(!showMenu)
+    setShowMenu(!showMenu);
   }
 
   const passClick = () => {
     console.log('clicked')
-    setShowMenu(!showMenu)
+    setShowMenu(!showMenu);
   }
   
   const menu = [

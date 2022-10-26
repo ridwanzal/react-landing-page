@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 function Designs() { 
     return ( 
         <>
-            <div className="section-general">
+            <div className="section-general opt-height">
                 <div className="wrapper">
                     <div className="wrapper-inner">
                         <div className="wrapper-content">
