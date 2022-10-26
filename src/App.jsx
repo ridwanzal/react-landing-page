@@ -14,6 +14,7 @@ import BlogSubmit from './page/backview/BlogSubmit';
 
 import {
   BrowserRouter,
+  HashRouter,
   Routes,
   Route,
 } from "react-router-dom";
@@ -25,27 +26,27 @@ function App() {
         <BrowserRouter>
           <Nav></Nav>
           <Routes>
-            <Route path="/articles" element={<News />}>
+            <Route path="/" index element={<Home />}>
             </Route>
-            <Route path="/projects" element={<Projects />}>
+            <Route path="/articles" index element={<News />}>
             </Route>
-            <Route path="/designs" element={<Designs />}>
+            <Route path="/projects" index element={<Projects />}>
             </Route>
-            <Route path="/contact" element={<Contact />}>
+            <Route path="/designs" index element={<Designs />}>
             </Route>
-            <Route path="/login" element={<Login />}>
+            <Route path="/contact" index element={<Contact />}>
             </Route>
-            <Route path="/about" element={<About />}>
+            <Route path="/login" index element={<Login />}>
             </Route>
-            <Route path="/blog" element={<Blog />}>
+            <Route path="/about" index element={<About />}>
             </Route>
-            <Route path="/blog/:id" element={<BlogDetail />}>
+            <Route path="/blog" index element={<Blog />}>
             </Route>
-            <Route path="*" element={<NotFound />}>
+            <Route path="/blog/:id" index element={<BlogDetail />}>
             </Route>
-            <Route path="/blog/add" element={<BlogSubmit />}>
+            <Route path="*" index element={<NotFound />}>
             </Route>
-            <Route path="/" element={<Home />}>
+            <Route path="/blog/add" index element={<BlogSubmit />}>
             </Route>
           </Routes>
         </BrowserRouter>

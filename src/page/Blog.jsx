@@ -55,6 +55,17 @@ function Blog() {
                         <Skeleton count={1} height={10} duration={10} />
                         <Skeleton count={1} height={10} duration={10} />
                         <Skeleton count={1} height={10} duration={10} />
+                        <br/>
+                        <Skeleton count={1} height={10} duration={10} />
+                        <Skeleton count={1} height={10} duration={10} />
+                        <Skeleton count={1} height={10} duration={10} />
+                        <Skeleton count={1} height={10} duration={10} />
+                        <br/>
+                        <Skeleton count={1} height={10} duration={10} />
+                        <Skeleton count={1} height={10} duration={10} />
+                        <Skeleton count={1} height={10} duration={10} />
+                        <Skeleton count={1} height={10} duration={10} />
+                        <br/>
                       </div>
                     }
                   </div>}
