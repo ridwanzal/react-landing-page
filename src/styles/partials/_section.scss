@@ -23,6 +23,10 @@
 
         &.flex {
             display: flex;
+
+            @media #{$media-not-desktop}{  
+                display: block; 
+            }
         }
     }
 
@@ -83,6 +87,7 @@
 
             @media #{$media-not-desktop}{    
                 display: block;
+
                 .contain-wrap {
                     &:first-child {
                         margin-right: 0 !important;
