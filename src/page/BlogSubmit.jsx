@@ -1,5 +1,5 @@
-import '../../styles/styles.scss';
-import Footer from '../../components/Footer';
+import '../styles/styles.scss';
+import Footer from '../components/Footer';
 import { useState } from 'react';
 import MDEditor from '@uiw/react-md-editor';
 import rehypeSanitize from "rehype-sanitize";

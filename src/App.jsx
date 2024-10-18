@@ -5,12 +5,12 @@ import Nav from './components/Nav';
 import Designs from './page/Designs';
 import Projects from './page/Projects';
 import Contact from './page/Contact';
-import Login from './page/backview/Login';
+import Login from './page/Login';
 import NotFound from './page/NotFound';
 import About from './page/About';
 import Blog from './page/Blog';
 import BlogDetail from './page/BlogDetail';
-import BlogSubmit from './page/backview/BlogSubmit';
+import BlogSubmit from './page/BlogSubmit';
 
 import {
   BrowserRouter,
